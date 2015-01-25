@@ -1,0 +1,8 @@
+#!/bin/bash
+sudo bash -c "echo 0 > /proc/sys/kernel/yama/ptrace_scope"
+cd McSim
+make INCS=-I/home/agy/mcsim/pin/extras/xed2-intel64/include -j 8 >> compiles.log
+cd ..
+for i in `seq 1 20`; do
+	McSim/mcsim -mdfile ./Apps/md/md-o3-closed.py -runfile ./Apps/list/run-stream-4.py | grep "total number of fetched instructions"
+done

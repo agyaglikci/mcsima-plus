@@ -1,0 +1,99 @@
+##############################################################
+#
+# This file includes all the test targets as well as all the
+# non-default build rules and test recipes.
+#
+##############################################################
+
+
+##############################################################
+#
+# Test targets
+#
+##############################################################
+
+###### Place all generic definitions here ######
+
+# This defines tests which run tools of the same name.  This is simply for convenience to avoid
+# defining the test name twice (once in TOOL_ROOTS and again in TEST_ROOTS).
+# Tests defined here should not be defined in TOOL_ROOTS and TEST_ROOTS.
+TEST_TOOL_ROOTS :=
+
+# This defines the tests to be run that were not already defined in TEST_TOOL_ROOTS.
+TEST_ROOTS :=
+
+# This defines a list of tests that should run in the "short" sanity. Tests in this list must also
+# appear either in the TEST_TOOL_ROOTS or the TEST_ROOTS list.
+# If the entire directory should be tested in sanity, assign TEST_TOOL_ROOTS and TEST_ROOTS to the
+# SANITY_SUBSET variable in the tests section below (see example in makefile.rules.tmpl).
+SANITY_SUBSET :=
+
+# This defines the tools which will be run during the the tests, and were not already defined in
+# TEST_TOOL_ROOTS.
+TOOL_ROOTS :=
+
+# This defines all the applications that will be run during the tests.
+APP_ROOTS :=
+
+# This defines any additional object files that need to be compiled.
+OBJECT_ROOTS :=
+
+# This defines any additional dlls (shared objects), other than the pintools, that need to be compiled.
+DLL_ROOTS :=
+
+# This defines any static libraries (archives), that need to be built.
+LIB_ROOTS :=
+
+###### Place OS-specific definitions here ######
+
+# Android
+ifeq ($(TARGET_OS),android)
+    TEST_ROOTS += example_test
+    TOOL_ROOTS += attach_tool
+    APP_ROOTS += example_test
+endif
+
+
+##############################################################
+#
+# Test recipes
+#
+##############################################################
+
+# This section contains recipes for tests other than the default.
+# See makefile.default.rules for the default test rules.
+# All tests in this section should adhere to the naming convention: <testname>.test
+
+# This is a time limit (in seconds) we use for some of the tests below. It's intentionally high
+# to avoid timeouts when the system load is very high, which can happen in our nightly tests.
+APP_PATH := /data/data
+TLIMIT := 600
+TIMER_EXAMPLE := com.example.timerexample
+TIMER_BASE := $(APP_PATH)/$(TIMER_EXAMPLE)
+
+example_test.test: $(OBJDIR)
+	$(BASHTEST) `pm list packages | $(CGREP) -w $(TIMER_EXAMPLE)` -eq "1"
+	run-as $(TIMER_EXAMPLE) touch $(TIMER_BASE)/example_test.out
+	am start -n $(TIMER_EXAMPLE)/.MainActivity
+	count=0;until [ `$(PGREP) '\b$(TIMER_EXAMPLE)\b' ` ] || [ $$count -gt $(TLIMIT) ]; do sleep 1; \
+	  count=`$(EXPR) $$count + 1`;done
+	$(BASHTEST) `$(PGREP) '\b$(TIMER_EXAMPLE)\b'` -gt "0"
+	run-as $(TIMER_EXAMPLE) $(REMOTE_ROOT)/pin -pid `$(PGREP) '\b$(TIMER_EXAMPLE)\b'` \
+	  -logfile "$(TIMER_BASE)/timerexample.log" -t `realpath $(OBJDIR)attach_tool$(PINTOOL_SUFFIX)` \
+	    -o "$(TIMER_BASE)/example_test.out"
+	count=0;until [ `$(CGREP) -w "Pin attached" $(TIMER_BASE)/example_test.out` -eq 1 ] || [ $$count -gt $(TLIMIT) ]; \
+	  do sleep 1; count=`$(EXPR) $$count + 1` ; done
+	$(BASHTEST) `$(CGREP) -w "Pin attached" $(TIMER_BASE)/example_test.out` -eq 1
+	run-as $(TIMER_EXAMPLE) $(RM) $(TIMER_BASE)/example_test.out
+	am force-stop $(TIMER_EXAMPLE)
+
+
+##############################################################
+#
+# Build rules
+#
+##############################################################
+
+# This section contains the build rules for all binaries that have special build rules.
+# See makefile.default.rules for the default build rules.
+

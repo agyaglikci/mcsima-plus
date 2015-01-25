@@ -1,0 +1,88 @@
+README
+------
+
+McSimA+ [1] models x86-based asymmetric manycore microarchitectures
+for both core and uncore subsystems, including a full spectrum of
+asymmetric cores from single-threaded to multithreaded and from in-
+order to out-of-order, sophisticated cache hierarchies, coherence
+hardware, on-chip interconnects, memory controllers, and main memory.
+McSimA+ was once called McSim, when Jung Ho Ahn started to develop
+the simulator at HP Labs. Please contact Jung Ho Ahn (gajh@snu.ac.kr)
+for technical questions.
+
+
+Requirements
+------------
+
+McSimA+ utilizes the user-level pthread library by Pan et al. [2],
+which is implemented on top of Pin.  McSimA+ requires Pin, a dynamic
+instrumentation tool, so download Pin at http://www.pintool.org.
+As of now, McSimA+ is developed and tested in the Linux environment.
+
+
+How to compile
+--------------
+
+1. Download Pin at http://www.pintool.org and unzip it.
+2. Download McSimA+ and unzip it.  Now we assume that
+ - McSimA+ is located at: /home/scale/
+ - Pin is located at:     /home/scale/pin/
+3. Compile McSimA+ by
+ - cd /home/scale/McSim
+ - make INCS=-I/home/scale/pin/extras/xed2-intel64/include -j 8
+ - McSimA+ needs snappy compression library from Google.
+  = http://code.google.com/p/snappy/
+  = please install and setup proper environmental variables such as
+    export LD_LIBRARY_PATH=/usr/local/lib:
+4. Compile Pthread
+ - cd /home/scale/Pthread
+ - make TOOLS_DIR=/home/scale/pin/source/tools -j 8
+5. Compile a test program 'stream'
+ - cd /home/scale/McSim/stream
+ - make
+
+
+How to run
+----------
+
+*. Turn off ASLR.  ASLR makes memory allocators return different
+   virtual address per program run.
+ - how to turn it off depends on Linux distribution.
+  = In RHEL/Ubuntu, "sudo echo 0 > /proc/sys/kernel/randomize_va_space"
+  = See below if do not have sudo privilege to execute the command to turn off ASLR
+1. Test run
+ - export PIN=/home/scale/pin/intel64/bin/pinbin
+ - export PINTOOL=/home/scale/Pthread/mypthreadtool
+ - cd /home/scale/McSim
+ - ./mcsim -mdfile ../Apps/md/md-o3-closed.py -runfile ../Apps/list/run-test.py
+2. Test stream
+ - export PATH=$PATH:/home/scale/McSim/stream/:
+ - cd /home/scale/McSim
+ - ./mcsim -mdfile ../Apps/md/md-o3-closed.py -runfile ../Apps/list/run-stream.py
+3. When do not have sudo privilege to turn off ASLR for the system
+ - Turn off ASLR when launching McSimA+ simulation
+  = setarch `uname -m` -R ./mcsim -mdfile ../Apps/md/md-o3-closed.py -runfile ../Apps/list/run-test.py  
+
+How to generate traces
+----------------------
+
+1. Compile tracegen
+ - cd /home/scale/TraceGen
+ - make TOOLS_DIR=/home/scale/pin/source/tools -j 8
+2. Run tracegen
+ - /home/scale/pin/intel64/bin/pinbin -t /home/scale/TraceGen/tracegen -prefix prefix_name -slice_size size point1 point2 ... -- exectuable to extract traces
+
+References
+----------
+
+[1] J. Ahn, S. Li, S. O and N. P. Jouppi, "McSimA+: A Manycore Simulator
+    with Application-level+ Simulation and Detailed Microarchitecture 
+    Modeling," in Proceedings of the IEEE International Symposium on 
+    Performance Analysis of Systems and Software (ISPASS), Austin, TX, 
+    USA, April 2013.
+
+[2] H. Pan, K. Asanovic, R. Cohn and C. K. Luk, "Controlling Program 
+    Execution through Binary Instrumentation," Computer Architecture 
+    News, vol.33, no.5, 2005.
+
+
