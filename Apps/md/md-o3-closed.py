@@ -94,6 +94,8 @@ pts.dir.has_directory_cache  = false
 
 # NoC type = ring/mesh/xbar
 pts.noc_type                 = mesh
+mesh.num_rows				 = 4
+mesh.num_cols				 = 4
 pts.xbar.to_dir_t            = 40
 pts.xbar.to_l2_t             = 40
 pts.xbar.process_interval    = 10
