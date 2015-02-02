@@ -1,0 +1,1 @@
+64 0 /home/agy/mcsim/McSim/stream STREAM -p64 -n65536 -r2 -s512
