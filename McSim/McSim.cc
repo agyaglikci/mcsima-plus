@@ -189,7 +189,8 @@ McSim::McSim(PthreadTimingSimulator * pts_)
   is_asymmetric = pts->get_param_str("is_asymmetric") == "true" ? true : false;
 
   string is_asymmetric_text = is_asymmetric ? "yes" : "no";
-  cout << "is_asymmetric : " << is_asymmetric_text << endl;
+  cout << "is_asymmetric  : " << is_asymmetric_text << endl;
+  cout << "number of cores: " << num_hthreads << "default value for number of cores : " << max_hthreads << endl; 
 
   uint32_t num_threads_per_l1_cache   = pts->get_param_uint64("pts.num_hthreads_per_l1$", 4);
   assert(use_o3core == false || num_threads_per_l1_cache == 1);
@@ -500,34 +501,48 @@ McSim::~McSim()
   uint64_t ipc1000 = (global_q->curr_time == 0 ) ? 0 : (1000 * num_fetched_instrs * lsu_process_interval / global_q->curr_time);
   cout << "  -- total number of fetched instructions : " << num_fetched_instrs
     << " (IPC = " << setw(3) << ipc1000/1000 << "." << setfill('0') << setw(3) << ipc1000%1000 << ")" << endl;
-
+  int i = 0;
   for (vector<Hthread *>::iterator iter = hthreads.begin(); iter != hthreads.end(); ++iter)
   {
+    cout << "hthread " << i << " is deleted" << endl; i++;
     delete (*iter);
   }
+  i = 0;
   for (vector<O3Core *>::iterator iter = o3cores.begin(); iter != o3cores.end(); ++iter)
   {
+    cout << "o3core " << i << " is deleted" << endl; i++;
     delete (*iter);
   }
+  i = 0;
   for (vector<CacheL2 *>::iterator iter = l2s.begin(); iter != l2s.end(); ++iter)
   {
+    cout << "l2s " << i << " is deleted" << endl; i++;
     delete (*iter);
   }
+  i = 0;
   for (vector<Directory *>::iterator iter = dirs.begin(); iter != dirs.end(); ++iter)
   {
+    cout << "directory " << i << " is deleted" << endl; i++;
     delete (*iter);
   }
+  i = 0;
   for (vector<MemoryController *>::iterator iter = mcs.begin(); iter != mcs.end(); ++iter)
   {
+    cout << "memory controller " << i << " is deleted" << endl; i++;
     delete (*iter);
   }
   delete noc;
+  cout << "noc is deleted" << endl; i++;
+  i = 0;
   for (vector<CacheL1 *>::iterator iter = l1is.begin(); iter != l1is.end(); ++iter)
   {
+    cout << "l1is " << i << " is deleted" << endl; i++;
     delete (*iter);
   }
+  i = 0;
   for (vector<CacheL1 *>::iterator iter = l1ds.begin(); iter != l1ds.end(); ++iter)
   {
+    cout << "l1ds " << i << " is deleted" << endl; i++;
     delete (*iter);
   }
 

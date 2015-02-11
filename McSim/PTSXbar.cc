@@ -323,15 +323,19 @@ Mesh2D::Mesh2D(
  :NoC(type_, num_, mcsim_),
   mc_pos(),
   num_req_in_mesh(0),
-  sw_to_sw_t(get_param_uint64("mesh.sw_to_sw_t", 10)), // mesh prefix is added to identify in md-file (by agy)
-  num_rows  (get_param_uint64("mesh.num_rows", 4)),
-  num_cols  (get_param_uint64("mesh.num_cols", 2)),
+  sw_to_sw_t(mcsim->pts->get_param_uint64("pts.mesh.sw_to_sw_t", 10)), // mesh prefix is added to identify in md-file (by agy)
+  num_rows  (mcsim->pts->get_param_uint64("pts.mesh.num_rows", 4)),
+  num_cols  (mcsim->pts->get_param_uint64("pts.mesh.num_cols", 2)),
   req_qs(num_rows, vector< vector< multimap<uint64_t, EventPair> > >(num_cols, vector< multimap<uint64_t, EventPair> >(mesh_invalid))),
   crq_qs(num_rows, vector< vector< multimap<uint64_t, EventPair> > >(num_cols, vector< multimap<uint64_t, EventPair> >(mesh_invalid))),
   rep_qs(num_rows, vector< vector< multimap<uint64_t, EventPair> > >(num_cols, vector< multimap<uint64_t, EventPair> >(mesh_invalid))),
   already_sent(mesh_invalid),
   token(0), num_hops(0), num_hops2(0)
 {
+  cout << "  -- MESH[" << num << "] : rows / columns  = " << num_rows << " / " << num_cols << endl;
+  cout << "  -- MESH[" << num << "] : num_req_in_mesh = " << num_req_in_mesh << endl;
+  cout << "  -- MESH[" << num << "] : custom_number   = " << mcsim->pts->get_param_uint64("pts.custom_number", 2);
+
   process_interval = get_param_uint64("process_interval", 10);
   uint32_t num_mcs = get_param_uint64("num_mcs", "pts.", 2);
 
@@ -373,10 +377,6 @@ Mesh2D::~Mesh2D()
 {
   if (num_hops > 0)
   {
-    cout << "  -- MESH[" << num << "] : rows / columns = "
-         << num_rows << " / " << num_cols << endl;
-    cout << "  -- MESH[" << num << "] : num_req_in_mesh = "
-         << num_req_in_mesh << endl;
     cout << "  -- MESH[" << num << "] : average hop = "
          << 1.0 * num_hops / num_flits << endl;
   }

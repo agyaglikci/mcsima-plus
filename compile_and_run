@@ -1,6 +1,8 @@
 #!/bin/bash
+cd McSim/graphTraversal
+make
+cd ..
 sudo bash -c "echo 0 > /proc/sys/kernel/yama/ptrace_scope"
-cd McSim
 make INCS=-I/home/agy/mcsim/pin/extras/xed2-intel64/include -j 8 >> compiles.log
 cd ..
-McSim/mcsim -mdfile ./Apps/md/md-o3-closed.py -runfile ./Apps/list/run-stream-4.py
+McSim/mcsim -mdfile ./Apps/md/md-o3-closed.py -runfile ./Apps/list/graph-traversal.py

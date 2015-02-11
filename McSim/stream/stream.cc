@@ -58,7 +58,7 @@ int main(int argc, char * argv)
   mcsim_skip_instrs_begin();
   char c;
 
-  uint32_t num_processors  = 1;
+  uint32_t num_processors  = 64;
   uint32_t num_repeats     = 4;
   uint32_t page_sz_in_word = 512;
   uint64_t stream_length   = 1048576;
