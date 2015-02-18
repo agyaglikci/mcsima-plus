@@ -15,22 +15,17 @@ Graph::Graph(){
             this->adjacencyMatrix[i][j] = -1;
         }
     }
+    
+    // Adjacency matrix weight values are calculated as Gaussian Distribution by using the following coefficients:
+    // Variance = NUM_OF_LINKS
+    // Scale = GRAPH_SIZE
+    // Expected Value is some offset of some scaled index (scale factor is 61 since it is a prime number; offset is 3 for no reason)
+    double_t alpha = 100*GRAPH_SIZE / sqrt(2 * M_PI * NUM_OF_LINKS);
     for (int32_t i = 0 ; i < GRAPH_SIZE ; i++) {
-        //cout << "Neighbors of node#"<<i<<" are: ";
-        for (int32_t j = 0 ; j < NUM_OF_LINKS ; j++) {
-            double incos = (j+1) * M_PI / GRAPH_SIZE;
-            int32_t target = ((int) ((i+1) * cos(incos))) % GRAPH_SIZE;
-            int32_t a = 0;
-            while ((target == i || adjacencyMatrix[i][target] != -1 ) && a < GRAPH_SIZE){
-                target = (target + 1) % GRAPH_SIZE;
-                a++;
-            }
-            int32_t strength = 100 * exp(-(((i+j)%GRAPH_SIZE)-GRAPH_SIZE/2)^2/100);
-            if (strength < 0) strength = 1;
-            this->adjacencyMatrix[i][target] = strength;
-            //cout << "("<<target<<","<<strength<<") ";
+        int32_t expectedValue = (i*61+3)%GRAPH_SIZE;
+        for (int32_t j = 0 ; j < GRAPH_SIZE ; j++) {
+            this->adjacencyMatrix[i][j] = (int) (alpha * exp(-pow(j-expectedValue,2)/(GRAPH_SIZE)));
         }
-        //cout << endl;
     }
     
     for (int i = 0 ; i < GRAPH_SIZE; i++) {
@@ -40,6 +35,8 @@ Graph::Graph(){
     for (int i = 0; i < GRAPH_SIZE; i++) {
         nodeArray[i]->setHintPointer(this->getStrongestNeighbor(i));
     }
+    //logAdjMatrix();
+
 }
 
 void Graph::logAdjMatrix(){
@@ -62,6 +59,7 @@ Node * Graph::getStrongestNeighbor(int nodeIndex){
             strongestValue = this->adjacencyMatrix[nodeIndex][j];
         }
     }
+    //cout << "Strongest of #" << nodeIndex << " is #" << strongestIndex << " with value " << strongestValue << endl;
     return this->nodeArray[strongestIndex];
 }
 

@@ -1,1 +1,1 @@
-64 1000 /home/agy/mcsim/McSim/graphTraversal GRAPHTRAVERSAL
+64 40000 /home/agy/mcsim/McSim/graphTraversal GRAPHTRAVERSAL

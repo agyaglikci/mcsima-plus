@@ -1,0 +1,836 @@
+g++  -c -O3 -w -g -DNDEBUG -fno-builtin -c main.cc -o main.o
+g++  -static main.o Graph.o Node.o ../../Apps/mcsim_wrapper.o -O3 -w -g -DNDEBUG -fno-builtin -o GRAPHTRAVERSAL ../../Pthread/libmypthread.a
+is_asymmetric  : no
+number of cores: 64default value for number of cores : 1024
+ct_meshct_mesh
+  -- MESH[0] : rows / columns  = 4 / 4
+  -- MESH[0] : num_req_in_mesh = 0
+  -- MESH[0] : hop_cost = 100
+in case when the program exits with an error, please run the following command
+kill -9 4273 
+  -- {42795} cmd: /home/agy/mcsim/pin/intel64/bin/pinbin -t /home/agy/mcsim/Pthread/mypthreadtool -port 42795 -skip_first 40000 -- GRAPHTRAVERSAL 
+NYI: __pthread_initialize_minimal at: 0x468210
+NYI: __linkin_atfork at: 0x4c0230
+  -- [           0]: {42795} thread 0 is created
+  -- [       77730]: {42795} thread 1 is created
+  -- [       77730]: {42795} thread 2 is created
+  -- [       77730]: {42795} thread 3 is created
+  -- [       78390]: {42795} thread 4 is created
+  -- [       78390]: {42795} thread 5 is created
+  -- [       78390]: {42795} thread 6 is created
+  -- [       78390]: {42795} thread 7 is created
+  -- [       78390]: {42795} thread 8 is created
+  -- [       78390]: {42795} thread 9 is created
+  -- [       78390]: {42795} thread 10 is created
+  -- [       83310]: {42795} thread 11 is created
+  -- [       83310]: {42795} thread 12 is created
+  -- [       83310]: {42795} thread 13 is created
+  -- [       83310]: {42795} thread 14 is created
+  -- [       83310]: {42795} thread 15 is created
+  -- [       83310]: {42795} thread 16 is created
+  -- [       83310]: {42795} thread 17 is created
+  -- [       83560]: {42795} thread 18 is created
+  -- [       83560]: {42795} thread 19 is created
+  -- [       83560]: {42795} thread 20 is created
+  -- [       83560]: {42795} thread 21 is created
+  -- [       83560]: {42795} thread 22 is created
+  -- [       83560]: {42795} thread 23 is created
+  -- [       83560]: {42795} thread 24 is created
+  -- [       83740]: {42795} thread 25 is created
+  -- [       83740]: {42795} thread 26 is created
+  -- [       83740]: {42795} thread 27 is created
+  -- [       83740]: {42795} thread 28 is created
+  -- [       83740]: {42795} thread 29 is created
+  -- [       83740]: {42795} thread 30 is created
+  -- [       83740]: {42795} thread 31 is created
+  -- [       84020]: {42795} thread 32 is created
+  -- [       84020]: {42795} thread 33 is created
+  -- [       84020]: {42795} thread 34 is created
+  -- [       84020]: {42795} thread 35 is created
+  -- [       84020]: {42795} thread 36 is created
+  -- [       84020]: {42795} thread 37 is created
+  -- [       84020]: {42795} thread 38 is created
+  -- [       84300]: {42795} thread 39 is created
+  -- [       84300]: {42795} thread 40 is created
+  -- [       84300]: {42795} thread 41 is created
+  -- [       84300]: {42795} thread 42 is created
+  -- [       84300]: {42795} thread 43 is created
+  -- [       84300]: {42795} thread 44 is created
+  -- [       84300]: {42795} thread 45 is created
+  -- [       84580]: {42795} thread 46 is created
+  -- [       84580]: {42795} thread 47 is created
+  -- [       84580]: {42795} thread 48 is created
+  -- [       84580]: {42795} thread 49 is created
+  -- [       84580]: {42795} thread 50 is created
+  -- [       84580]: {42795} thread 51 is created
+  -- [       84580]: {42795} thread 52 is created
+  -- [       84860]: {42795} thread 53 is created
+  -- [       84860]: {42795} thread 54 is created
+  -- [       84860]: {42795} thread 55 is created
+  -- [       84860]: {42795} thread 56 is created
+  -- [       84860]: {42795} thread 57 is created
+  -- [       84860]: {42795} thread 58 is created
+  -- [       84860]: {42795} thread 59 is created
+  -- [       85140]: {42795} thread 60 is created
+  -- [       85140]: {42795} thread 61 is created
+  -- [       85140]: {42795} thread 62 is created
+  -- [       85140]: {42795} thread 63 is created
+  -- [      181960]:     100053 instrs so far, IPC=   5.498, L1 (acc, miss)=(   69369,   7052), L2 (acc, miss)=(   7061,   1449),    365 mem accs, (  103,  103) touched pages (this time, 1stly),  avg_dd= 23.195, 
+  -- [      197290]:     200053 instrs so far, IPC=  65.231, L1 (acc, miss)=(   77536,   1343), L2 (acc, miss)=(   1358,     21),      4 mem accs, (    1,    0) touched pages (this time, 1stly),  avg_dd= 27.822, 
+  -- [      210110]:     300009 instrs so far, IPC=  77.968, L1 (acc, miss)=(   77408,    430), L2 (acc, miss)=(    429,      3),      8 mem accs, (    1,    0) touched pages (this time, 1stly),  avg_dd= 27.895, 
+  -- [      221870]:     400011 instrs so far, IPC=  85.035, L1 (acc, miss)=(   77506,    322), L2 (acc, miss)=(    325,      4),      4 mem accs, (    1,    0) touched pages (this time, 1stly),  avg_dd= 27.904, 
+  -- [      231350]: {42795} thread 1 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      231820]: {42795} thread 3 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      233700]:     500054 instrs so far, IPC=  84.567, L1 (acc, miss)=(   77759,    305), L2 (acc, miss)=(    304,     10),     10 mem accs, (    5,    2) touched pages (this time, 1stly),  avg_dd= 27.957, 
+  -- [      237080]: {42795} thread 5 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      238810]: {42795} thread 4 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      238990]: {42795} thread 2 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      240880]: {42795} thread 6 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      242110]: {42795} thread 7 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      246110]: {42795} thread 15 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      246680]:     600029 instrs so far, IPC=  77.022, L1 (acc, miss)=(   78117,    328), L2 (acc, miss)=(    330,     13),      9 mem accs, (    3,    0) touched pages (this time, 1stly),  avg_dd= 28.138, 
+  -- [      246950]: {42795} thread 53 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      247730]: {42795} thread 37 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      248630]: {42795} thread 12 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      249020]: {42795} thread 52 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      250020]: {42795} thread 36 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      250040]: {42795} thread 14 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      250790]: {42795} thread 8 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      251170]: {42795} thread 54 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      251400]: {42795} thread 13 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      251590]: {42795} thread 38 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      251920]: {42795} thread 55 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      252760]: {42795} thread 39 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      254410]: {42795} thread 21 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      254970]: {42795} thread 24 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      255090]: {42795} thread 20 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      255570]: {42795} thread 11 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      255640]: {42795} thread 9 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      257060]: {42795} thread 10 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      257930]: {42795} thread 23 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      258570]: {42795} thread 31 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      260440]: {42795} thread 47 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      260580]: {42795} thread 27 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      260750]: {42795} thread 25 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      260980]: {42795} thread 40 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      261080]: {42795} thread 28 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      261200]: {42795} thread 63 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      262150]: {42795} thread 44 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      262820]: {42795} thread 26 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      262990]: {42795} thread 30 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      263240]: {42795} thread 56 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      263340]: {42795} thread 29 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      263630]: {42795} thread 60 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      264580]: {42795} thread 46 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      264900]: {42795} thread 45 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      265190]: {42795} thread 62 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      266220]: {42795} thread 61 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      266250]: {42795} thread 41 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      266970]:     700013 instrs so far, IPC=  49.277, L1 (acc, miss)=(   81420,    434), L2 (acc, miss)=(    442,     39),     13 mem accs, (    3,    0) touched pages (this time, 1stly),  avg_dd= 28.907, 
+  -- [      266980]: {42795} thread 43 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      267950]: {42795} thread 17 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      267950]: {42795} thread 57 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      268020]: {42795} thread 42 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      268270]: {42795} thread 16 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      268410]: {42795} thread 19 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      268590]: {42795} thread 59 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      270300]: {42795} thread 58 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      274880]: {42795} thread 18 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      277750]: {42795} thread 33 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      277870]: {42795} thread 32 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      278100]: {42795} thread 35 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      285010]: {42795} thread 34 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      285310]: {42795} thread 48 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      285410]: {42795} thread 51 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      286060]: {42795} thread 49 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      293230]: {42795} thread 50 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+  -- [      370620]: {42795} thread 22 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       5132,       3078,        0,        0,        0,        0,      11288)
+64
+  -- [      424720]: {42795} thread 0 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(       6072,       4034,        0,        0,        0,        0,      17124)
+  -- {42795} total number of unsimulated (ins, rd, wr, rd_2nd): (37713, 5707, 6510, 0)
+  -- {42795} (cond_broadcast, cond_signal, cond_wait, barrier) = (0, 0, 0, 64)
+  -- event became empty at cycle = 800000
+  -- th[  0] fetched 17134 instrs
+  -- th[  1] fetched 11290 instrs
+  -- th[  2] fetched 11290 instrs
+  -- th[  3] fetched 11290 instrs
+  -- th[  4] fetched 11290 instrs
+  -- th[  5] fetched 11290 instrs
+  -- th[  6] fetched 11290 instrs
+  -- th[  7] fetched 11290 instrs
+  -- th[  8] fetched 11290 instrs
+  -- th[  9] fetched 11290 instrs
+  -- th[ 10] fetched 11290 instrs
+  -- th[ 11] fetched 11290 instrs
+  -- th[ 12] fetched 11290 instrs
+  -- th[ 13] fetched 11290 instrs
+  -- th[ 14] fetched 11290 instrs
+  -- th[ 15] fetched 11290 instrs
+  -- th[ 16] fetched 11290 instrs
+  -- th[ 17] fetched 11290 instrs
+  -- th[ 18] fetched 11290 instrs
+  -- th[ 19] fetched 11290 instrs
+  -- th[ 20] fetched 11290 instrs
+  -- th[ 21] fetched 11290 instrs
+  -- th[ 22] fetched 11290 instrs
+  -- th[ 23] fetched 11290 instrs
+  -- th[ 24] fetched 11290 instrs
+  -- th[ 25] fetched 11290 instrs
+  -- th[ 26] fetched 11290 instrs
+  -- th[ 27] fetched 11290 instrs
+  -- th[ 28] fetched 11290 instrs
+  -- th[ 29] fetched 11290 instrs
+  -- th[ 30] fetched 11290 instrs
+  -- th[ 31] fetched 11290 instrs
+  -- th[ 32] fetched 11290 instrs
+  -- th[ 33] fetched 11290 instrs
+  -- th[ 34] fetched 11290 instrs
+  -- th[ 35] fetched 11290 instrs
+  -- th[ 36] fetched 11290 instrs
+  -- th[ 37] fetched 11290 instrs
+  -- th[ 38] fetched 11290 instrs
+  -- th[ 39] fetched 11290 instrs
+  -- th[ 40] fetched 11290 instrs
+  -- th[ 41] fetched 11290 instrs
+  -- th[ 42] fetched 11290 instrs
+  -- th[ 43] fetched 11290 instrs
+  -- th[ 44] fetched 11290 instrs
+  -- th[ 45] fetched 11290 instrs
+  -- th[ 46] fetched 11290 instrs
+  -- th[ 47] fetched 11290 instrs
+  -- th[ 48] fetched 11290 instrs
+  -- th[ 49] fetched 11290 instrs
+  -- th[ 50] fetched 11290 instrs
+  -- th[ 51] fetched 11290 instrs
+  -- th[ 52] fetched 11290 instrs
+  -- th[ 53] fetched 11290 instrs
+  -- th[ 54] fetched 11290 instrs
+  -- th[ 55] fetched 11290 instrs
+  -- th[ 56] fetched 11290 instrs
+  -- th[ 57] fetched 11290 instrs
+  -- th[ 58] fetched 11290 instrs
+  -- th[ 59] fetched 11290 instrs
+  -- th[ 60] fetched 11290 instrs
+  -- th[ 61] fetched 11290 instrs
+  -- th[ 62] fetched 11290 instrs
+  -- th[ 63] fetched 11290 instrs
+  -- total number of fetched instructions : 728404 (IPC =   9.105)
+o3core 0 is deleted
+  -- OOO [000] : fetched 0000017134 instrs, branch (miss, access)=( 00000222, 0000004432)= 005.01%, nacks= 765, x87_ops= 0, call_ops= 1223, latest_ip= 0x467d80, tot_mem_wr_time= 3161170, tot_mem_rd_time= 4792270, tot_dep_dist= 387547
+o3core 1 is deleted
+  -- OOO [001] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 183, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1653640, tot_mem_rd_time= 3164380, tot_dep_dist= 311421
+o3core 2 is deleted
+  -- OOO [002] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 175, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1749160, tot_mem_rd_time= 3315400, tot_dep_dist= 311743
+o3core 3 is deleted
+  -- OOO [003] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 235, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1664130, tot_mem_rd_time= 3169300, tot_dep_dist= 312668
+o3core 4 is deleted
+  -- OOO [004] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 70, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1669510, tot_mem_rd_time= 3143830, tot_dep_dist= 312977
+o3core 5 is deleted
+  -- OOO [005] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 65, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1645110, tot_mem_rd_time= 3105150, tot_dep_dist= 311898
+o3core 6 is deleted
+  -- OOO [006] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 63, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1698300, tot_mem_rd_time= 3199290, tot_dep_dist= 311867
+o3core 7 is deleted
+  -- OOO [007] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 73, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1714070, tot_mem_rd_time= 3210420, tot_dep_dist= 311476
+o3core 8 is deleted
+  -- OOO [008] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 88, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1826860, tot_mem_rd_time= 3431710, tot_dep_dist= 311315
+o3core 9 is deleted
+  -- OOO [009] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 86, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1887600, tot_mem_rd_time= 3566650, tot_dep_dist= 312294
+o3core 10 is deleted
+  -- OOO [010] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 82, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1894380, tot_mem_rd_time= 3533420, tot_dep_dist= 311298
+o3core 11 is deleted
+  -- OOO [011] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 76, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1922970, tot_mem_rd_time= 3621990, tot_dep_dist= 311561
+o3core 12 is deleted
+  -- OOO [012] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 65, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1805330, tot_mem_rd_time= 3373190, tot_dep_dist= 311362
+o3core 13 is deleted
+  -- OOO [013] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 66, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1835100, tot_mem_rd_time= 3440250, tot_dep_dist= 312921
+o3core 14 is deleted
+  -- OOO [014] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 62, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1851220, tot_mem_rd_time= 3464980, tot_dep_dist= 311646
+o3core 15 is deleted
+  -- OOO [015] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 55, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1771820, tot_mem_rd_time= 3329200, tot_dep_dist= 311132
+o3core 16 is deleted
+  -- OOO [016] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 146, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 2052780, tot_mem_rd_time= 3884480, tot_dep_dist= 313821
+o3core 17 is deleted
+  -- OOO [017] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 150, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 2065150, tot_mem_rd_time= 3909360, tot_dep_dist= 313514
+o3core 18 is deleted
+  -- OOO [018] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 132, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 2114040, tot_mem_rd_time= 3950420, tot_dep_dist= 310555
+o3core 19 is deleted
+  -- OOO [019] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 144, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 2060770, tot_mem_rd_time= 3885720, tot_dep_dist= 312141
+o3core 20 is deleted
+  -- OOO [020] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 86, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1877250, tot_mem_rd_time= 3471400, tot_dep_dist= 294918
+o3core 21 is deleted
+  -- OOO [021] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 87, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1865290, tot_mem_rd_time= 3457210, tot_dep_dist= 295184
+o3core 22 is deleted
+  -- OOO [022] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 300, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 3304340, tot_mem_rd_time= 5989140, tot_dep_dist= 306991
+o3core 23 is deleted
+  -- OOO [023] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 87, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1871650, tot_mem_rd_time= 3457530, tot_dep_dist= 296238
+o3core 24 is deleted
+  -- OOO [024] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 77, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1865150, tot_mem_rd_time= 3485160, tot_dep_dist= 310200
+o3core 25 is deleted
+  -- OOO [025] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 82, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1975760, tot_mem_rd_time= 3761680, tot_dep_dist= 313577
+o3core 26 is deleted
+  -- OOO [026] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 78, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1988470, tot_mem_rd_time= 3749530, tot_dep_dist= 313384
+o3core 27 is deleted
+  -- OOO [027] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 79, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1928680, tot_mem_rd_time= 3615840, tot_dep_dist= 311224
+o3core 28 is deleted
+  -- OOO [028] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 72, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1873660, tot_mem_rd_time= 3502910, tot_dep_dist= 310168
+o3core 29 is deleted
+  -- OOO [029] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 80, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1907750, tot_mem_rd_time= 3587780, tot_dep_dist= 313289
+o3core 30 is deleted
+  -- OOO [030] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 79, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1883280, tot_mem_rd_time= 3537960, tot_dep_dist= 312380
+o3core 31 is deleted
+  -- OOO [031] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 75, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1810990, tot_mem_rd_time= 3385950, tot_dep_dist= 311694
+o3core 32 is deleted
+  -- OOO [032] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 147, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 2120400, tot_mem_rd_time= 4011370, tot_dep_dist= 313860
+o3core 33 is deleted
+  -- OOO [033] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 132, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 2074700, tot_mem_rd_time= 3883710, tot_dep_dist= 307673
+o3core 34 is deleted
+  -- OOO [034] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 138, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 2167890, tot_mem_rd_time= 4087420, tot_dep_dist= 313555
+o3core 35 is deleted
+  -- OOO [035] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 143, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 2074210, tot_mem_rd_time= 3905190, tot_dep_dist= 312000
+o3core 36 is deleted
+  -- OOO [036] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 59, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1815030, tot_mem_rd_time= 3420600, tot_dep_dist= 312022
+o3core 37 is deleted
+  -- OOO [037] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 67, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1768210, tot_mem_rd_time= 3332790, tot_dep_dist= 312080
+o3core 38 is deleted
+  -- OOO [038] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 64, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1819960, tot_mem_rd_time= 3445360, tot_dep_dist= 312395
+o3core 39 is deleted
+  -- OOO [039] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 68, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1815810, tot_mem_rd_time= 3417200, tot_dep_dist= 311596
+o3core 40 is deleted
+  -- OOO [040] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 73, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1866200, tot_mem_rd_time= 3490370, tot_dep_dist= 307626
+o3core 41 is deleted
+  -- OOO [041] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 93, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1938450, tot_mem_rd_time= 3652900, tot_dep_dist= 313269
+o3core 42 is deleted
+  -- OOO [042] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 80, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1955370, tot_mem_rd_time= 3650150, tot_dep_dist= 311740
+o3core 43 is deleted
+  -- OOO [043] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 84, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1923920, tot_mem_rd_time= 3608630, tot_dep_dist= 313145
+o3core 44 is deleted
+  -- OOO [044] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 76, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1907360, tot_mem_rd_time= 3582800, tot_dep_dist= 312130
+o3core 45 is deleted
+  -- OOO [045] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 70, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1931820, tot_mem_rd_time= 3607460, tot_dep_dist= 311532
+o3core 46 is deleted
+  -- OOO [046] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 65, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1987460, tot_mem_rd_time= 3741320, tot_dep_dist= 311756
+o3core 47 is deleted
+  -- OOO [047] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 72, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1884790, tot_mem_rd_time= 3537270, tot_dep_dist= 312136
+o3core 48 is deleted
+  -- OOO [048] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 130, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 2241010, tot_mem_rd_time= 4249060, tot_dep_dist= 313495
+o3core 49 is deleted
+  -- OOO [049] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 144, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 2209250, tot_mem_rd_time= 4180770, tot_dep_dist= 313540
+o3core 50 is deleted
+  -- OOO [050] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 137, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 2295880, tot_mem_rd_time= 4309920, tot_dep_dist= 313290
+o3core 51 is deleted
+  -- OOO [051] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 126, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 2187410, tot_mem_rd_time= 4028660, tot_dep_dist= 305787
+o3core 52 is deleted
+  -- OOO [052] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 64, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1701200, tot_mem_rd_time= 3198350, tot_dep_dist= 312004
+o3core 53 is deleted
+  -- OOO [053] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 54, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1702340, tot_mem_rd_time= 3223280, tot_dep_dist= 313499
+o3core 54 is deleted
+  -- OOO [054] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 51, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1779710, tot_mem_rd_time= 3321450, tot_dep_dist= 311289
+o3core 55 is deleted
+  -- OOO [055] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 68, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1723030, tot_mem_rd_time= 3212550, tot_dep_dist= 311457
+o3core 56 is deleted
+  -- OOO [056] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 70, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1946770, tot_mem_rd_time= 3631880, tot_dep_dist= 312392
+o3core 57 is deleted
+  -- OOO [057] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 81, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1991490, tot_mem_rd_time= 3763560, tot_dep_dist= 313282
+o3core 58 is deleted
+  -- OOO [058] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 69, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1978430, tot_mem_rd_time= 3695400, tot_dep_dist= 311677
+o3core 59 is deleted
+  -- OOO [059] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 79, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1958160, tot_mem_rd_time= 3623120, tot_dep_dist= 311111
+o3core 60 is deleted
+  -- OOO [060] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 71, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1885540, tot_mem_rd_time= 3518800, tot_dep_dist= 312083
+o3core 61 is deleted
+  -- OOO [061] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 68, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1897000, tot_mem_rd_time= 3538730, tot_dep_dist= 313043
+o3core 62 is deleted
+  -- OOO [062] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 61, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1980390, tot_mem_rd_time= 3701370, tot_dep_dist= 312534
+o3core 63 is deleted
+  -- OOO [063] : fetched 0000011290 instrs, branch (miss, access)=( 00000008, 0000003075)= 000.26%, nacks= 60, x87_ops= 0, call_ops= 1025, latest_ip= 0x7f06593aa8c0, tot_mem_wr_time= 1846430, tot_mem_rd_time= 3435420, tot_dep_dist= 309629
+l2s 0 is deleted
+  -- L2$ [000] : RD (miss, access)=( 0000001312, 0000001802)= 072.81%
+  -- L2$ [000] : WR (miss, access)=( 0000000397, 0000000559)= 071.02%
+  -- L2$ [000] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000003, 0000000000, 0000000834, 0000000017, 0000001337, 0000001337)
+  -- L2$ [000] : EV_from_L1 (miss, access)=( 0000000000, 0000000137)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0977, 0011, 0008, 0002, 0000), num_dirty_lines (pid:#) = 0 : 47 , 
+l2s 1 is deleted
+  -- L2$ [001] : RD (miss, access)=( 0000000342, 0000000797)= 042.91%
+  -- L2$ [001] : WR (miss, access)=( 0000000013, 0000000111)= 011.71%
+  -- L2$ [001] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000154, 0000000000, 0000000271, 0000000271)
+  -- L2$ [001] : EV_from_L1 (miss, access)=( 0000000000, 0000000066)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 2 is deleted
+  -- L2$ [002] : RD (miss, access)=( 0000000407, 0000000849)= 047.94%
+  -- L2$ [002] : WR (miss, access)=( 0000000008, 0000000103)= 007.77%
+  -- L2$ [002] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000072, 0000000000, 0000000332, 0000000332)
+  -- L2$ [002] : EV_from_L1 (miss, access)=( 0000000000, 0000000066)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 3 is deleted
+  -- L2$ [003] : RD (miss, access)=( 0000000321, 0000000773)= 041.53%
+  -- L2$ [003] : WR (miss, access)=( 0000000011, 0000000109)= 010.09%
+  -- L2$ [003] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000051, 0000000000, 0000000248, 0000000248)
+  -- L2$ [003] : EV_from_L1 (miss, access)=( 0000000000, 0000000068)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 4 is deleted
+  -- L2$ [004] : RD (miss, access)=( 0000000646, 0000001102)= 058.62%
+  -- L2$ [004] : WR (miss, access)=( 0000000009, 0000000107)= 008.41%
+  -- L2$ [004] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000017, 0000000000, 0000000572, 0000000572)
+  -- L2$ [004] : EV_from_L1 (miss, access)=( 0000000000, 0000000067)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 5 is deleted
+  -- L2$ [005] : RD (miss, access)=( 0000000471, 0000000966)= 048.76%
+  -- L2$ [005] : WR (miss, access)=( 0000000240, 0000000253)= 094.86%
+  -- L2$ [005] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000082, 0000000023, 0000000002, 0000000546, 0000000546)
+  -- L2$ [005] : EV_from_L1 (miss, access)=( 0000000041, 0000000043)= 95.35%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 6 is deleted
+  -- L2$ [006] : RD (miss, access)=( 0000000391, 0000000849)= 046.05%
+  -- L2$ [006] : WR (miss, access)=( 0000000008, 0000000106)= 007.55%
+  -- L2$ [006] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000030, 0000000000, 0000000316, 0000000316)
+  -- L2$ [006] : EV_from_L1 (miss, access)=( 0000000000, 0000000066)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 7 is deleted
+  -- L2$ [007] : RD (miss, access)=( 0000000378, 0000000837)= 045.16%
+  -- L2$ [007] : WR (miss, access)=( 0000000012, 0000000110)= 010.91%
+  -- L2$ [007] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000009, 0000000000, 0000000306, 0000000306)
+  -- L2$ [007] : EV_from_L1 (miss, access)=( 0000000000, 0000000066)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 8 is deleted
+  -- L2$ [008] : RD (miss, access)=( 0000000631, 0000001084)= 058.21%
+  -- L2$ [008] : WR (miss, access)=( 0000000012, 0000000110)= 010.91%
+  -- L2$ [008] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000015, 0000000000, 0000000560, 0000000560)
+  -- L2$ [008] : EV_from_L1 (miss, access)=( 0000000000, 0000000066)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 9 is deleted
+  -- L2$ [009] : RD (miss, access)=( 0000000332, 0000000792)= 041.92%
+  -- L2$ [009] : WR (miss, access)=( 0000000010, 0000000104)= 009.62%
+  -- L2$ [009] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000013, 0000000000, 0000000258, 0000000258)
+  -- L2$ [009] : EV_from_L1 (miss, access)=( 0000000000, 0000000066)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 10 is deleted
+  -- L2$ [010] : RD (miss, access)=( 0000000403, 0000000863)= 046.70%
+  -- L2$ [010] : WR (miss, access)=( 0000000010, 0000000108)= 009.26%
+  -- L2$ [010] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000012, 0000000000, 0000000330, 0000000330)
+  -- L2$ [010] : EV_from_L1 (miss, access)=( 0000000000, 0000000066)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 11 is deleted
+  -- L2$ [011] : RD (miss, access)=( 0000000358, 0000000818)= 043.77%
+  -- L2$ [011] : WR (miss, access)=( 0000000009, 0000000105)= 008.57%
+  -- L2$ [011] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000015, 0000000000, 0000000283, 0000000283)
+  -- L2$ [011] : EV_from_L1 (miss, access)=( 0000000000, 0000000066)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 12 is deleted
+  -- L2$ [012] : RD (miss, access)=( 0000000609, 0000001061)= 057.40%
+  -- L2$ [012] : WR (miss, access)=( 0000000011, 0000000109)= 010.09%
+  -- L2$ [012] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000014, 0000000000, 0000000537, 0000000537)
+  -- L2$ [012] : EV_from_L1 (miss, access)=( 0000000000, 0000000066)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 13 is deleted
+  -- L2$ [013] : RD (miss, access)=( 0000000312, 0000000771)= 040.47%
+  -- L2$ [013] : WR (miss, access)=( 0000000009, 0000000107)= 008.41%
+  -- L2$ [013] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000013, 0000000000, 0000000237, 0000000237)
+  -- L2$ [013] : EV_from_L1 (miss, access)=( 0000000000, 0000000066)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 14 is deleted
+  -- L2$ [014] : RD (miss, access)=( 0000000373, 0000000831)= 044.89%
+  -- L2$ [014] : WR (miss, access)=( 0000000009, 0000000104)= 008.65%
+  -- L2$ [014] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000009, 0000000000, 0000000299, 0000000299)
+  -- L2$ [014] : EV_from_L1 (miss, access)=( 0000000000, 0000000066)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+l2s 15 is deleted
+  -- L2$ [015] : RD (miss, access)=( 0000000333, 0000000794)= 041.94%
+  -- L2$ [015] : WR (miss, access)=( 0000000010, 0000000108)= 009.26%
+  -- L2$ [015] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000002, 0000000000, 0000000009, 0000000000, 0000000260, 0000000260)
+  -- L2$ [015] : EV_from_L1 (miss, access)=( 0000000000, 0000000066)= 0.00%,  L2$ (i,e,s,m,tr) ratio=(0994, 0000, 0004, 0000, 0000), num_dirty_lines (pid:#) = 0 : 4 , 
+directory 0 is deleted
+  -- Dir [000] : (i->tr, e->tr, s->tr, m->tr, m->i, tr->i, tr->e, tr->s, tr->m) = (40, 3, 29, 0, 0, 0, 25, 31, 16)
+  -- Dir [000] : (nack, bypass, evict, invalidate, from_mc, dir_acc, dir_$_miss, dir_$_retry, dir_$_evict) = (135, 0, 0, 0, 40, 278, 0, 0, 0), 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 
+directory 1 is deleted
+  -- Dir [001] : (i->tr, e->tr, s->tr, m->tr, m->i, tr->i, tr->e, tr->s, tr->m) = (159, 32, 421, 30, 0, 0, 97, 481, 64)
+  -- Dir [001] : (nack, bypass, evict, invalidate, from_mc, dir_acc, dir_$_miss, dir_$_retry, dir_$_evict) = (2676, 0, 0, 0, 159, 3959, 0, 0, 0), 99, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 
+directory 2 is deleted
+  -- Dir [002] : (i->tr, e->tr, s->tr, m->tr, m->i, tr->i, tr->e, tr->s, tr->m) = (178, 81, 606, 0, 41, 0, 116, 679, 70)
+  -- Dir [002] : (nack, bypass, evict, invalidate, from_mc, dir_acc, dir_$_miss, dir_$_retry, dir_$_evict) = (3633, 0, 82, 0, 178, 5445, 0, 0, 0), 105, 14, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 39, 
+directory 3 is deleted
+  -- Dir [003] : (i->tr, e->tr, s->tr, m->tr, m->i, tr->i, tr->e, tr->s, tr->m) = (104, 14, 30, 0, 0, 0, 84, 36, 28)
+  -- Dir [003] : (nack, bypass, evict, invalidate, from_mc, dir_acc, dir_$_miss, dir_$_retry, dir_$_evict) = (248, 0, 0, 0, 104, 543, 0, 0, 0), 98, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 
+memory controller 0 is deleted
+  -- MC  [000] : (rd, wr, act, pre) = (000000040, 000000000, 000000034, 000000034), # of WR->RD switch = 0, #_refresh = 0, 27 pages acc, AB (rd, wr, act) = (000000000, 000000000, 000000000), avg_tick_in_mc= 584
+               : local pred (miss,hit)=( 0, 0), global pred (miss,hit)=( 0, 0)
+memory controller 1 is deleted
+  -- MC  [001] : (rd, wr, act, pre) = (000000159, 000000030, 000000098, 000000098), # of WR->RD switch = 5, #_refresh = 0, 30 pages acc, AB (rd, wr, act) = (000000000, 000000000, 000000000), avg_tick_in_mc= 953
+               : local pred (miss,hit)=( 0, 0), global pred (miss,hit)=( 0, 0)
+memory controller 2 is deleted
+  -- MC  [002] : (rd, wr, act, pre) = (000000178, 000000041, 000000107, 000000107), # of WR->RD switch = 40, #_refresh = 0, 29 pages acc, AB (rd, wr, act) = (000000000, 000000000, 000000000), avg_tick_in_mc= 997
+               : local pred (miss,hit)=( 0, 0), global pred (miss,hit)=( 0, 0)
+memory controller 3 is deleted
+  -- MC  [003] : (rd, wr, act, pre) = (000000104, 000000000, 000000068, 000000068), # of WR->RD switch = 0, #_refresh = 0, 33 pages acc, AB (rd, wr, act) = (000000000, 000000000, 000000000), avg_tick_in_mc= 733
+               : local pred (miss,hit)=( 0, 0), global pred (miss,hit)=( 0, 0)
+  -- MESH[0] : average hop = 3.05
+  -- NoC [000] : (req, crq, rep) = (8416, 7486, 15365), num_data_transfers = 2970
+noc is deleted
+l1is 0 is deleted
+  -- L1$I[000] : RD (miss, access)=( 0000000215, 0000001089)= 019.74%, PRE (hit, reqs)=( 0, 0 )
+l1is 1 is deleted
+  -- L1$I[001] : RD (miss, access)=( 0000000006, 0000000538)= 001.12%, PRE (hit, reqs)=( 0, 0 )
+l1is 2 is deleted
+  -- L1$I[002] : RD (miss, access)=( 0000000024, 0000000554)= 004.33%, PRE (hit, reqs)=( 0, 0 )
+l1is 3 is deleted
+  -- L1$I[003] : RD (miss, access)=( 0000000026, 0000000558)= 004.66%, PRE (hit, reqs)=( 0, 0 )
+l1is 4 is deleted
+  -- L1$I[004] : RD (miss, access)=( 0000000018, 0000000550)= 003.27%, PRE (hit, reqs)=( 0, 0 )
+l1is 5 is deleted
+  -- L1$I[005] : RD (miss, access)=( 0000000018, 0000000549)= 003.28%, PRE (hit, reqs)=( 0, 0 )
+l1is 6 is deleted
+  -- L1$I[006] : RD (miss, access)=( 0000000018, 0000000551)= 003.27%, PRE (hit, reqs)=( 0, 0 )
+l1is 7 is deleted
+  -- L1$I[007] : RD (miss, access)=( 0000000018, 0000000549)= 003.28%, PRE (hit, reqs)=( 0, 0 )
+l1is 8 is deleted
+  -- L1$I[008] : RD (miss, access)=( 0000000015, 0000000546)= 002.75%, PRE (hit, reqs)=( 0, 0 )
+l1is 9 is deleted
+  -- L1$I[009] : RD (miss, access)=( 0000000017, 0000000550)= 003.09%, PRE (hit, reqs)=( 0, 0 )
+l1is 10 is deleted
+  -- L1$I[010] : RD (miss, access)=( 0000000016, 0000000546)= 002.93%, PRE (hit, reqs)=( 0, 0 )
+l1is 11 is deleted
+  -- L1$I[011] : RD (miss, access)=( 0000000007, 0000000538)= 001.30%, PRE (hit, reqs)=( 0, 0 )
+l1is 12 is deleted
+  -- L1$I[012] : RD (miss, access)=( 0000000010, 0000000542)= 001.85%, PRE (hit, reqs)=( 0, 0 )
+l1is 13 is deleted
+  -- L1$I[013] : RD (miss, access)=( 0000000015, 0000000547)= 002.74%, PRE (hit, reqs)=( 0, 0 )
+l1is 14 is deleted
+  -- L1$I[014] : RD (miss, access)=( 0000000014, 0000000546)= 002.56%, PRE (hit, reqs)=( 0, 0 )
+l1is 15 is deleted
+  -- L1$I[015] : RD (miss, access)=( 0000000011, 0000000544)= 002.02%, PRE (hit, reqs)=( 0, 0 )
+l1is 16 is deleted
+  -- L1$I[016] : RD (miss, access)=( 0000000010, 0000000541)= 001.85%, PRE (hit, reqs)=( 0, 0 )
+l1is 17 is deleted
+  -- L1$I[017] : RD (miss, access)=( 0000000014, 0000000546)= 002.56%, PRE (hit, reqs)=( 0, 0 )
+l1is 18 is deleted
+  -- L1$I[018] : RD (miss, access)=( 0000000012, 0000000542)= 002.21%, PRE (hit, reqs)=( 0, 0 )
+l1is 19 is deleted
+  -- L1$I[019] : RD (miss, access)=( 0000000013, 0000000543)= 002.39%, PRE (hit, reqs)=( 0, 0 )
+l1is 20 is deleted
+  -- L1$I[020] : RD (miss, access)=( 0000000012, 0000000542)= 002.21%, PRE (hit, reqs)=( 0, 0 )
+l1is 21 is deleted
+  -- L1$I[021] : RD (miss, access)=( 0000000013, 0000000544)= 002.39%, PRE (hit, reqs)=( 0, 0 )
+l1is 22 is deleted
+  -- L1$I[022] : RD (miss, access)=( 0000000014, 0000000546)= 002.56%, PRE (hit, reqs)=( 0, 0 )
+l1is 23 is deleted
+  -- L1$I[023] : RD (miss, access)=( 0000000015, 0000000546)= 002.75%, PRE (hit, reqs)=( 0, 0 )
+l1is 24 is deleted
+  -- L1$I[024] : RD (miss, access)=( 0000000012, 0000000543)= 002.21%, PRE (hit, reqs)=( 0, 0 )
+l1is 25 is deleted
+  -- L1$I[025] : RD (miss, access)=( 0000000009, 0000000542)= 001.66%, PRE (hit, reqs)=( 0, 0 )
+l1is 26 is deleted
+  -- L1$I[026] : RD (miss, access)=( 0000000013, 0000000545)= 002.39%, PRE (hit, reqs)=( 0, 0 )
+l1is 27 is deleted
+  -- L1$I[027] : RD (miss, access)=( 0000000013, 0000000545)= 002.39%, PRE (hit, reqs)=( 0, 0 )
+l1is 28 is deleted
+  -- L1$I[028] : RD (miss, access)=( 0000000010, 0000000542)= 001.85%, PRE (hit, reqs)=( 0, 0 )
+l1is 29 is deleted
+  -- L1$I[029] : RD (miss, access)=( 0000000014, 0000000546)= 002.56%, PRE (hit, reqs)=( 0, 0 )
+l1is 30 is deleted
+  -- L1$I[030] : RD (miss, access)=( 0000000016, 0000000548)= 002.92%, PRE (hit, reqs)=( 0, 0 )
+l1is 31 is deleted
+  -- L1$I[031] : RD (miss, access)=( 0000000016, 0000000548)= 002.92%, PRE (hit, reqs)=( 0, 0 )
+l1is 32 is deleted
+  -- L1$I[032] : RD (miss, access)=( 0000000015, 0000000547)= 002.74%, PRE (hit, reqs)=( 0, 0 )
+l1is 33 is deleted
+  -- L1$I[033] : RD (miss, access)=( 0000000018, 0000000548)= 003.28%, PRE (hit, reqs)=( 0, 0 )
+l1is 34 is deleted
+  -- L1$I[034] : RD (miss, access)=( 0000000017, 0000000549)= 003.10%, PRE (hit, reqs)=( 0, 0 )
+l1is 35 is deleted
+  -- L1$I[035] : RD (miss, access)=( 0000000015, 0000000547)= 002.74%, PRE (hit, reqs)=( 0, 0 )
+l1is 36 is deleted
+  -- L1$I[036] : RD (miss, access)=( 0000000010, 0000000542)= 001.85%, PRE (hit, reqs)=( 0, 0 )
+l1is 37 is deleted
+  -- L1$I[037] : RD (miss, access)=( 0000000013, 0000000545)= 002.39%, PRE (hit, reqs)=( 0, 0 )
+l1is 38 is deleted
+  -- L1$I[038] : RD (miss, access)=( 0000000010, 0000000542)= 001.85%, PRE (hit, reqs)=( 0, 0 )
+l1is 39 is deleted
+  -- L1$I[039] : RD (miss, access)=( 0000000013, 0000000545)= 002.39%, PRE (hit, reqs)=( 0, 0 )
+l1is 40 is deleted
+  -- L1$I[040] : RD (miss, access)=( 0000000012, 0000000544)= 002.21%, PRE (hit, reqs)=( 0, 0 )
+l1is 41 is deleted
+  -- L1$I[041] : RD (miss, access)=( 0000000016, 0000000548)= 002.92%, PRE (hit, reqs)=( 0, 0 )
+l1is 42 is deleted
+  -- L1$I[042] : RD (miss, access)=( 0000000015, 0000000547)= 002.74%, PRE (hit, reqs)=( 0, 0 )
+l1is 43 is deleted
+  -- L1$I[043] : RD (miss, access)=( 0000000014, 0000000546)= 002.56%, PRE (hit, reqs)=( 0, 0 )
+l1is 44 is deleted
+  -- L1$I[044] : RD (miss, access)=( 0000000013, 0000000545)= 002.39%, PRE (hit, reqs)=( 0, 0 )
+l1is 45 is deleted
+  -- L1$I[045] : RD (miss, access)=( 0000000013, 0000000545)= 002.39%, PRE (hit, reqs)=( 0, 0 )
+l1is 46 is deleted
+  -- L1$I[046] : RD (miss, access)=( 0000000006, 0000000538)= 001.12%, PRE (hit, reqs)=( 0, 0 )
+l1is 47 is deleted
+  -- L1$I[047] : RD (miss, access)=( 0000000013, 0000000545)= 002.39%, PRE (hit, reqs)=( 0, 0 )
+l1is 48 is deleted
+  -- L1$I[048] : RD (miss, access)=( 0000000008, 0000000540)= 001.48%, PRE (hit, reqs)=( 0, 0 )
+l1is 49 is deleted
+  -- L1$I[049] : RD (miss, access)=( 0000000016, 0000000548)= 002.92%, PRE (hit, reqs)=( 0, 0 )
+l1is 50 is deleted
+  -- L1$I[050] : RD (miss, access)=( 0000000014, 0000000546)= 002.56%, PRE (hit, reqs)=( 0, 0 )
+l1is 51 is deleted
+  -- L1$I[051] : RD (miss, access)=( 0000000015, 0000000544)= 002.76%, PRE (hit, reqs)=( 0, 0 )
+l1is 52 is deleted
+  -- L1$I[052] : RD (miss, access)=( 0000000016, 0000000548)= 002.92%, PRE (hit, reqs)=( 0, 0 )
+l1is 53 is deleted
+  -- L1$I[053] : RD (miss, access)=( 0000000014, 0000000546)= 002.56%, PRE (hit, reqs)=( 0, 0 )
+l1is 54 is deleted
+  -- L1$I[054] : RD (miss, access)=( 0000000010, 0000000542)= 001.85%, PRE (hit, reqs)=( 0, 0 )
+l1is 55 is deleted
+  -- L1$I[055] : RD (miss, access)=( 0000000016, 0000000548)= 002.92%, PRE (hit, reqs)=( 0, 0 )
+l1is 56 is deleted
+  -- L1$I[056] : RD (miss, access)=( 0000000010, 0000000542)= 001.85%, PRE (hit, reqs)=( 0, 0 )
+l1is 57 is deleted
+  -- L1$I[057] : RD (miss, access)=( 0000000013, 0000000545)= 002.39%, PRE (hit, reqs)=( 0, 0 )
+l1is 58 is deleted
+  -- L1$I[058] : RD (miss, access)=( 0000000009, 0000000541)= 001.66%, PRE (hit, reqs)=( 0, 0 )
+l1is 59 is deleted
+  -- L1$I[059] : RD (miss, access)=( 0000000013, 0000000545)= 002.39%, PRE (hit, reqs)=( 0, 0 )
+l1is 60 is deleted
+  -- L1$I[060] : RD (miss, access)=( 0000000013, 0000000545)= 002.39%, PRE (hit, reqs)=( 0, 0 )
+l1is 61 is deleted
+  -- L1$I[061] : RD (miss, access)=( 0000000012, 0000000544)= 002.21%, PRE (hit, reqs)=( 0, 0 )
+l1is 62 is deleted
+  -- L1$I[062] : RD (miss, access)=( 0000000008, 0000000540)= 001.48%, PRE (hit, reqs)=( 0, 0 )
+l1is 63 is deleted
+  -- L1$I[063] : RD (miss, access)=( 0000000013, 0000000545)= 002.39%, PRE (hit, reqs)=( 0, 0 )
+l1ds 0 is deleted
+  -- L1$D[000] : RD (miss, access)=( 0000000597, 0000006404)= 009.32%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[000] : WR (miss, access)=( 0000000435, 0000004409)= 009.87%
+  -- L1$D[000] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000000, 0000000063, 0000000000, 0000000019, 0000000707, 0000000707), num_dirty_lines (pid:#) = 0 : 28 , 
+l1ds 1 is deleted
+  -- L1$D[001] : RD (miss, access)=( 0000000297, 0000005315)= 005.59%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[001] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[001] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000183, 0000000183), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 2 is deleted
+  -- L1$D[002] : RD (miss, access)=( 0000000304, 0000005289)= 005.75%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[002] : WR (miss, access)=( 0000000098, 0000003078)= 003.18%
+  -- L1$D[002] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000157, 0000000157), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 3 is deleted
+  -- L1$D[003] : RD (miss, access)=( 0000000333, 0000005344)= 006.23%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[003] : WR (miss, access)=( 0000000005, 0000003081)= 000.16%
+  -- L1$D[003] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000000, 0000000000, 0000000001, 0000000000, 0000000215, 0000000215), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 4 is deleted
+  -- L1$D[004] : RD (miss, access)=( 0000000169, 0000005190)= 003.26%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[004] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[004] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000058, 0000000058), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 5 is deleted
+  -- L1$D[005] : RD (miss, access)=( 0000000168, 0000005182)= 003.24%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[005] : WR (miss, access)=( 0000000005, 0000003081)= 000.16%
+  -- L1$D[005] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000053, 0000000053), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 6 is deleted
+  -- L1$D[006] : RD (miss, access)=( 0000000220, 0000005183)= 004.24%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[006] : WR (miss, access)=( 0000000098, 0000003078)= 003.18%
+  -- L1$D[006] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000051, 0000000051), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 7 is deleted
+  -- L1$D[007] : RD (miss, access)=( 0000000168, 0000005189)= 003.24%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[007] : WR (miss, access)=( 0000000006, 0000003082)= 000.19%
+  -- L1$D[007] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000061, 0000000061), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 8 is deleted
+  -- L1$D[008] : RD (miss, access)=( 0000000192, 0000005209)= 003.69%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[008] : WR (miss, access)=( 0000000004, 0000003080)= 000.13%
+  -- L1$D[008] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000079, 0000000079), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 9 is deleted
+  -- L1$D[009] : RD (miss, access)=( 0000000188, 0000005207)= 003.61%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[009] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[009] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000075, 0000000075), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 10 is deleted
+  -- L1$D[010] : RD (miss, access)=( 0000000231, 0000005204)= 004.44%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[010] : WR (miss, access)=( 0000000095, 0000003078)= 003.09%
+  -- L1$D[010] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000072, 0000000072), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 11 is deleted
+  -- L1$D[011] : RD (miss, access)=( 0000000183, 0000005207)= 003.51%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[011] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[011] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000075, 0000000075), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 12 is deleted
+  -- L1$D[012] : RD (miss, access)=( 0000000173, 0000005193)= 003.33%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[012] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[012] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000061, 0000000061), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 13 is deleted
+  -- L1$D[013] : RD (miss, access)=( 0000000172, 0000005187)= 003.32%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[013] : WR (miss, access)=( 0000000004, 0000003080)= 000.13%
+  -- L1$D[013] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000001, 0000000001, 0000000000, 0000000057, 0000000057), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 14 is deleted
+  -- L1$D[014] : RD (miss, access)=( 0000000218, 0000005186)= 004.20%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[014] : WR (miss, access)=( 0000000098, 0000003078)= 003.18%
+  -- L1$D[014] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000054, 0000000054), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 15 is deleted
+  -- L1$D[015] : RD (miss, access)=( 0000000160, 0000005179)= 003.09%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[015] : WR (miss, access)=( 0000000005, 0000003081)= 000.16%
+  -- L1$D[015] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000001, 0000000001, 0000000000, 0000000050, 0000000050), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 16 is deleted
+  -- L1$D[016] : RD (miss, access)=( 0000000269, 0000005273)= 005.10%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[016] : WR (miss, access)=( 0000000003, 0000003079)= 000.10%
+  -- L1$D[016] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000001, 0000000001, 0000000000, 0000000142, 0000000142), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 17 is deleted
+  -- L1$D[017] : RD (miss, access)=( 0000000273, 0000005274)= 005.18%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[017] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[017] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000142, 0000000142), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 18 is deleted
+  -- L1$D[018] : RD (miss, access)=( 0000000251, 0000005256)= 004.78%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[018] : WR (miss, access)=( 0000000100, 0000003080)= 003.25%
+  -- L1$D[018] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000126, 0000000126), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 19 is deleted
+  -- L1$D[019] : RD (miss, access)=( 0000000260, 0000005269)= 004.93%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[019] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[019] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000137, 0000000137), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 20 is deleted
+  -- L1$D[020] : RD (miss, access)=( 0000000222, 0000005211)= 004.26%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[020] : WR (miss, access)=( 0000000003, 0000003079)= 000.10%
+  -- L1$D[020] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000017, 0000000000, 0000000017, 0000000000, 0000000080, 0000000080), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 21 is deleted
+  -- L1$D[021] : RD (miss, access)=( 0000000227, 0000005212)= 004.36%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[021] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[021] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000017, 0000000000, 0000000017, 0000000000, 0000000080, 0000000080), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 22 is deleted
+  -- L1$D[022] : RD (miss, access)=( 0000000250, 0000005222)= 004.79%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[022] : WR (miss, access)=( 0000000244, 0000003280)= 007.44%
+  -- L1$D[022] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000074, 0000000000, 0000000074, 0000000002, 0000000292, 0000000292), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 23 is deleted
+  -- L1$D[023] : RD (miss, access)=( 0000000213, 0000005210)= 004.09%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[023] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[023] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000017, 0000000000, 0000000017, 0000000000, 0000000078, 0000000078), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 24 is deleted
+  -- L1$D[024] : RD (miss, access)=( 0000000180, 0000005202)= 003.46%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[024] : WR (miss, access)=( 0000000003, 0000003079)= 000.10%
+  -- L1$D[024] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000071, 0000000071), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 25 is deleted
+  -- L1$D[025] : RD (miss, access)=( 0000000208, 0000005211)= 003.99%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[025] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[025] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000079, 0000000079), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 26 is deleted
+  -- L1$D[026] : RD (miss, access)=( 0000000241, 0000005203)= 004.63%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[026] : WR (miss, access)=( 0000000098, 0000003078)= 003.18%
+  -- L1$D[026] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000071, 0000000071), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 27 is deleted
+  -- L1$D[027] : RD (miss, access)=( 0000000173, 0000005203)= 003.33%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[027] : WR (miss, access)=( 0000000003, 0000003079)= 000.10%
+  -- L1$D[027] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000072, 0000000072), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 28 is deleted
+  -- L1$D[028] : RD (miss, access)=( 0000000173, 0000005197)= 003.33%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[028] : WR (miss, access)=( 0000000005, 0000003081)= 000.16%
+  -- L1$D[028] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000068, 0000000068), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 29 is deleted
+  -- L1$D[029] : RD (miss, access)=( 0000000186, 0000005204)= 003.57%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[029] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[029] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000072, 0000000072), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 30 is deleted
+  -- L1$D[030] : RD (miss, access)=( 0000000238, 0000005198)= 004.58%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[030] : WR (miss, access)=( 0000000101, 0000003081)= 003.28%
+  -- L1$D[030] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000069, 0000000069), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 31 is deleted
+  -- L1$D[031] : RD (miss, access)=( 0000000184, 0000005197)= 003.54%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[031] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[031] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000065, 0000000065), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 32 is deleted
+  -- L1$D[032] : RD (miss, access)=( 0000000264, 0000005267)= 005.01%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[032] : WR (miss, access)=( 0000000005, 0000003081)= 000.16%
+  -- L1$D[032] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000138, 0000000138), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 33 is deleted
+  -- L1$D[033] : RD (miss, access)=( 0000000211, 0000005252)= 004.02%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[033] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[033] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000120, 0000000120), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 34 is deleted
+  -- L1$D[034] : RD (miss, access)=( 0000000294, 0000005259)= 005.59%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[034] : WR (miss, access)=( 0000000098, 0000003078)= 003.18%
+  -- L1$D[034] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000127, 0000000127), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 35 is deleted
+  -- L1$D[035] : RD (miss, access)=( 0000000250, 0000005263)= 004.75%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[035] : WR (miss, access)=( 0000000005, 0000003081)= 000.16%
+  -- L1$D[035] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000134, 0000000134), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 36 is deleted
+  -- L1$D[036] : RD (miss, access)=( 0000000172, 0000005187)= 003.32%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[036] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[036] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000055, 0000000055), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 37 is deleted
+  -- L1$D[037] : RD (miss, access)=( 0000000173, 0000005190)= 003.33%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[037] : WR (miss, access)=( 0000000004, 0000003080)= 000.13%
+  -- L1$D[037] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000060, 0000000060), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 38 is deleted
+  -- L1$D[038] : RD (miss, access)=( 0000000232, 0000005190)= 004.47%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[038] : WR (miss, access)=( 0000000096, 0000003080)= 003.12%
+  -- L1$D[038] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000060, 0000000060), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 39 is deleted
+  -- L1$D[039] : RD (miss, access)=( 0000000169, 0000005193)= 003.25%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[039] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[039] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000061, 0000000061), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 40 is deleted
+  -- L1$D[040] : RD (miss, access)=( 0000000181, 0000005199)= 003.48%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[040] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[040] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000067, 0000000067), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 41 is deleted
+  -- L1$D[041] : RD (miss, access)=( 0000000208, 0000005213)= 003.99%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[041] : WR (miss, access)=( 0000000004, 0000003080)= 000.13%
+  -- L1$D[041] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000083, 0000000083), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 42 is deleted
+  -- L1$D[042] : RD (miss, access)=( 0000000227, 0000005201)= 004.36%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[042] : WR (miss, access)=( 0000000100, 0000003080)= 003.25%
+  -- L1$D[042] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000071, 0000000071), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 43 is deleted
+  -- L1$D[043] : RD (miss, access)=( 0000000190, 0000005208)= 003.65%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[043] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[043] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000076, 0000000076), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 44 is deleted
+  -- L1$D[044] : RD (miss, access)=( 0000000184, 0000005199)= 003.54%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[044] : WR (miss, access)=( 0000000004, 0000003080)= 000.13%
+  -- L1$D[044] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000069, 0000000069), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 45 is deleted
+  -- L1$D[045] : RD (miss, access)=( 0000000172, 0000005195)= 003.31%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[045] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[045] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000063, 0000000063), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 46 is deleted
+  -- L1$D[046] : RD (miss, access)=( 0000000236, 0000005197)= 004.54%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[046] : WR (miss, access)=( 0000000096, 0000003078)= 003.12%
+  -- L1$D[046] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000065, 0000000065), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 47 is deleted
+  -- L1$D[047] : RD (miss, access)=( 0000000181, 0000005196)= 003.48%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[047] : WR (miss, access)=( 0000000003, 0000003079)= 000.10%
+  -- L1$D[047] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000065, 0000000065), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 48 is deleted
+  -- L1$D[048] : RD (miss, access)=( 0000000255, 0000005260)= 004.85%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[048] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[048] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000128, 0000000128), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 49 is deleted
+  -- L1$D[049] : RD (miss, access)=( 0000000261, 0000005264)= 004.96%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[049] : WR (miss, access)=( 0000000004, 0000003080)= 000.13%
+  -- L1$D[049] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000134, 0000000134), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 50 is deleted
+  -- L1$D[050] : RD (miss, access)=( 0000000294, 0000005258)= 005.59%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[050] : WR (miss, access)=( 0000000101, 0000003081)= 003.28%
+  -- L1$D[050] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000129, 0000000129), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 51 is deleted
+  -- L1$D[051] : RD (miss, access)=( 0000000198, 0000005249)= 003.77%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[051] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[051] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000117, 0000000117), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 52 is deleted
+  -- L1$D[052] : RD (miss, access)=( 0000000168, 0000005185)= 003.24%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[052] : WR (miss, access)=( 0000000003, 0000003079)= 000.10%
+  -- L1$D[052] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000054, 0000000054), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 53 is deleted
+  -- L1$D[053] : RD (miss, access)=( 0000000168, 0000005178)= 003.24%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[053] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[053] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000046, 0000000046), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 54 is deleted
+  -- L1$D[054] : RD (miss, access)=( 0000000215, 0000005179)= 004.15%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[054] : WR (miss, access)=( 0000000098, 0000003078)= 003.18%
+  -- L1$D[054] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000047, 0000000047), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 55 is deleted
+  -- L1$D[055] : RD (miss, access)=( 0000000164, 0000005188)= 003.16%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[055] : WR (miss, access)=( 0000000004, 0000003080)= 000.13%
+  -- L1$D[055] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000058, 0000000058), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 56 is deleted
+  -- L1$D[056] : RD (miss, access)=( 0000000187, 0000005197)= 003.60%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[056] : WR (miss, access)=( 0000000003, 0000003079)= 000.10%
+  -- L1$D[056] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000066, 0000000066), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 57 is deleted
+  -- L1$D[057] : RD (miss, access)=( 0000000203, 0000005206)= 003.90%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[057] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[057] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000074, 0000000074), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 58 is deleted
+  -- L1$D[058] : RD (miss, access)=( 0000000224, 0000005198)= 004.31%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[058] : WR (miss, access)=( 0000000095, 0000003078)= 003.09%
+  -- L1$D[058] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000066, 0000000066), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 59 is deleted
+  -- L1$D[059] : RD (miss, access)=( 0000000172, 0000005202)= 003.31%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[059] : WR (miss, access)=( 0000000004, 0000003080)= 000.13%
+  -- L1$D[059] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000072, 0000000072), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 60 is deleted
+  -- L1$D[060] : RD (miss, access)=( 0000000181, 0000005194)= 003.48%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[060] : WR (miss, access)=( 0000000004, 0000003080)= 000.13%
+  -- L1$D[060] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000064, 0000000064), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 61 is deleted
+  -- L1$D[061] : RD (miss, access)=( 0000000172, 0000005194)= 003.31%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[061] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[061] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000062, 0000000062), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 62 is deleted
+  -- L1$D[062] : RD (miss, access)=( 0000000228, 0000005189)= 004.39%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[062] : WR (miss, access)=( 0000000100, 0000003080)= 003.25%
+  -- L1$D[062] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000064, 0000000001, 0000000000, 0000000059, 0000000059), num_dirty_lines (pid:#) = 0 : 1 , 
+l1ds 63 is deleted
+  -- L1$D[063] : RD (miss, access)=( 0000000167, 0000005185)= 003.22%, PRE (hit, reqs)=( 0, 0 )
+  -- L1$D[063] : WR (miss, access)=( 0000000002, 0000003078)= 000.06%
+  -- L1$D[063] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=( 0000000001, 0000000000, 0000000001, 0000000000, 0000000053, 0000000053), num_dirty_lines (pid:#) = 0 : 1 , 

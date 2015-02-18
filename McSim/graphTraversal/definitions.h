@@ -23,7 +23,7 @@
 
 #define NUM_OF_PROC  64
 #define NUM_OF_LINKS 32
-#define GRAPH_SIZE  64
+#define GRAPH_SIZE  1024
 #define HINT_HEADER 0x0F0F0F0F
 #define HINT_FOOTER 0xF0F0F0F0
 #define _USE_MATH_DEFINES

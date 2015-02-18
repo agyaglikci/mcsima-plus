@@ -104,7 +104,7 @@ CacheL1::CacheL1(
     }
   }
 
-  use_prefetch          = false;//(get_param_str("use_prefetch") == "true");
+  use_prefetch   = false;//(get_param_str("use_prefetch") == "true");
   num_prefetch_requests = 0;
   num_prefetch_hits     = 0;
   num_pre_entries       = get_param_uint64("num_pre_entries", 64);

@@ -334,7 +334,7 @@ Mesh2D::Mesh2D(
 {
   cout << "  -- MESH[" << num << "] : rows / columns  = " << num_rows << " / " << num_cols << endl;
   cout << "  -- MESH[" << num << "] : num_req_in_mesh = " << num_req_in_mesh << endl;
-  cout << "  -- MESH[" << num << "] : custom_number   = " << mcsim->pts->get_param_uint64("pts.custom_number", 2);
+  cout << "  -- MESH[" << num << "] : hop_cost = " << sw_to_sw_t << endl;
 
   process_interval = get_param_uint64("process_interval", 10);
   uint32_t num_mcs = get_param_uint64("num_mcs", "pts.", 2);

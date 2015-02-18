@@ -41,7 +41,8 @@ void *gotoNext(void *arg)
     pthread_barrier_wait(p->barrier);
 
     Node myNode = *p->myGraph->nodeArray[startIndex];
-    for (int i = 0 ; i < NUM_OF_PROC * NUM_OF_LINKS ; i++) {
+    for (int i = 0 ; i < GRAPH_SIZE ; i++) {
+        //myNode.procFlags[i] = true;
         myNode = *myNode.getHitPointer();
     }
     return (NULL);
@@ -68,8 +69,8 @@ int main(int argc, char* argv[]) {
         th_args[i].barrier        = barrier;
     }
 
-    mcsim_skip_instrs_end();
     double sum = 0.0;
+    mcsim_skip_instrs_end();
 
     for (uint32_t i = 1; i < NUM_OF_PROC; i++)
     {
@@ -112,4 +113,3 @@ int32_t log_2(uint64_t number)
         return(-1);
     }
 }
-
