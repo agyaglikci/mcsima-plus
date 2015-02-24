@@ -18,6 +18,6 @@ void Node::setHintPointer(Node *neighbor){
     //cout << "Strongest neighbor for node #" << this->nodeIndex << " is node #" << neighbor->nodeIndex << endl;
 }
 
-Node * Node::getHitPointer(){
-    return nodeHint->nodePointer;
+hint Node::getHintPointer(){
+    return * nodeHint;
 }

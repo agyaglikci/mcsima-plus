@@ -147,6 +147,13 @@ bool PthreadTimingSimulator::add_instruction(
   ptsinstr->rw1        = rw1;
   ptsinstr->rw2        = rw2;
   ptsinstr->rw3        = rw3;
+
+  /*LDS Prefetcher modification starts here*/
+  //PIN_SafeCopy(&(ptsinstr->hint_header) , raddr , sizeof(uint32_t));
+  //PIN_SafeCopy(&(ptsinstr->hint_pointer), raddr + sizeof(uint32_t) , sizeof(uint64_t));
+  //PIN_SafeCopy(&(ptsinstr->hint_footer) , raddr + sizeof(uint32_t) + sizeof(uint64_t), sizeof(uint32_t));
+  /*LDS Prefetcher modification ends here*/
+  
   if (num_piled_instr > 0 && (ptsmessage->val.instr[num_piled_instr-1]).hthreadid_ != hthreadid_)
   {
     cout << curr_time_ << "  " << (ptsmessage->val.instr[num_piled_instr-1]).hthreadid_ << "  " << hthreadid_ << endl;

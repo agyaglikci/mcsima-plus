@@ -115,6 +115,9 @@ CacheL1::CacheL1(
   {
     pres[i] = new PrefetchEntry();
   }
+
+  use_lds_prefetch = true; // flag for lds prefetcher
+  num_hints = 0;  // counter for detected hint structures
 }
 
 
@@ -408,6 +411,20 @@ uint32_t CacheL1::process_event(uint64_t curr_time)
         case et_write:
           if (index != 0) break;
           rep_lqe->from.pop();
+
+          /*Linked Data Structure, Pointer Based Prefetching added by agy*/
+          if (use_lds_prefetch){
+            uint32_t hint_header, hint_footer;
+            uint64_t hint_pointer;
+            //PIN_SafeCopy(&hint_header  , rep_lqe->address    , sizeof(uint32_t));
+            //PIN_SafeCopy(&hint_pointer , rep_lqe->address+4  , sizeof(uint64_t));
+            //PIN_SafeCopy(&hint_footer  , rep_lqe->address+12 , sizeof(uint32_t));
+            if (hint_header == 0x0F0F0F0F && hint_footer == 0xF0F0F0F0){
+              num_hints++;
+            }
+          }
+          /*Linked Data Structure, Pointer Based Prefetching ends here*/
+
           if (set_iter == NULL)
           //if (set_iter == tags[set].end())
           {

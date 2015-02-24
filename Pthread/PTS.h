@@ -88,6 +88,9 @@ struct PTSInstr
   uint32_t rw1;
   uint32_t rw2;
   uint32_t rw3;
+  uint32_t hint_header;
+  uint64_t hint_pointer;
+  uint32_t hint_footer;
 };
 
 
@@ -131,6 +134,9 @@ struct PTSInstrTrace
   uint32_t rw1;
   uint32_t rw2;
   uint32_t rw3;
+  uint32_t hint_header;
+  uint64_t hint_pointer;
+  uint32_t hint_footer;
 };
 
 
