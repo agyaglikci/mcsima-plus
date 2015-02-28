@@ -88,6 +88,7 @@ struct PTSInstr
   uint32_t rw1;
   uint32_t rw2;
   uint32_t rw3;
+  bool     hint_pointer_valid;  uint64_t hint_pointer; //LDS PREFETCHER MODIFICATION HERE
 };
 
 
@@ -131,6 +132,7 @@ struct PTSInstrTrace
   uint32_t rw1;
   uint32_t rw2;
   uint32_t rw3;
+  bool     hint_pointer_valid;  uint64_t hint_pointer; //LDS PREFETCHER MODIFICATION HERE
 };
 
 

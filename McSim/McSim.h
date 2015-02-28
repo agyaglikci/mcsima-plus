@@ -122,6 +122,7 @@ namespace PinPthread
           bool     isbarrier,
           uint32_t rr0, uint32_t rr1, uint32_t rr2, uint32_t rr3,
           uint32_t rw0, uint32_t rw1, uint32_t rw2, uint32_t rw3
+        , bool hint_pointer_valid, uint64_t hint_pointer //LDS PRFETCHER MODIFICATION HERE
           );  // return value -- whether we have to resume simulation
       void link_thread(int32_t pth_id, bool * active_, int32_t * spinning_, ADDRINT * stack_, ADDRINT * stacksize_);
       void set_stack_n_size(int32_t pth_id, ADDRINT stack, ADDRINT stacksize);
@@ -182,6 +183,8 @@ namespace PinPthread
       uint64_t num_l2_acc_last;
       uint64_t num_l2_miss_last;
       uint64_t num_dependency_distance_last;
+
+      uint32_t num_hint;
   };
 
 }

@@ -31,7 +31,6 @@
 #ifndef __PTS_H__
 #define __PTS_H__
 
-
 #include <list>
 #include <map>
 #include <queue>
@@ -115,6 +114,7 @@ struct PTSInstr
   uint32_t rw1;
   uint32_t rw2;
   uint32_t rw3;
+  bool hint_pointer_valid; uint64_t hint_pointer; //LDS PREFETCHER MODIFICATION HERE
 };
 
 typedef union
@@ -166,6 +166,7 @@ namespace PinPthread
           bool     isbarrier,
           uint32_t rr0, uint32_t rr1, uint32_t rr2, uint32_t rr3,
           uint32_t rw0, uint32_t rw1, uint32_t rw2, uint32_t rw3
+        , bool hint_pointer_valid, uint64_t hint_pointer  //LDS PREFETCHER MODIFICATION HERE
           );  // return value -- whether we have to resume simulation
       void set_stack_n_size(int32_t pth_id, ADDRINT stack, ADDRINT stacksize);
       void set_active(int32_t pth_id, bool is_active);
