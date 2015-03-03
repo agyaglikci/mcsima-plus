@@ -1,8 +1,8 @@
 TARGET = GRAPHTRAVERSAL
 OBJS = main.o Graph.o Node.o
 VPATH = SRC INCLUDE
-#CFLAGS = -O0 -g -ggdb -w  -Wall
-CFLAGS = -O3 -w -g -DNDEBUG -fno-builtin
+CFLAGS = -O0 -g -ggdb -w  -Wall
+#CFLAGS = -O3 -w -g -DNDEBUG -fno-builtin
 #LDFLAGS = -lpthread 
 LDFLAGS = ../../Pthread/libmypthread.a
 WRAPPER_OBJ = ../../Apps/mcsim_wrapper.o

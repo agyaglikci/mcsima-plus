@@ -41,9 +41,12 @@ void *gotoNext(void *arg)
     pthread_barrier_wait(p->barrier);
 
     Node myNode = *p->myGraph->nodeArray[startIndex];
+    uint32_t sumOfHeaders = 0, sumOfFooters = 0;
     for (int i = 0 ; i < GRAPH_SIZE ; i++) {
-        //myNode.procFlags[i] = true;
-        myNode = *myNode.getHitPointer();
+        hint myHint = myNode.getHint();
+        sumOfHeaders += myHint.header;
+        sumOfFooters += myHint.footer;
+        myNode = *myHint.nodePointer;
     }
     return (NULL);
 }

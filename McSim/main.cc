@@ -39,7 +39,6 @@ struct Programs
 
 int main(int argc, char * argv[])
 {
-  uint32_t num_valid_hint = 0;
   string line, temp;
   istringstream sline;
   string mdfile;
@@ -194,7 +193,7 @@ int main(int argc, char * argv[])
       pts->add_instruction(offset, 0, 0, 0, 0, 0, 0, 0, 0,
           false, false, false, false, false,
           0, 0, 0, 0, 0, 0, 0, 0
-          , false, 0  //LDS PREFETCHER MODIFICATION HERE
+          , false, 0 ,0 ,0 //LDS PREFETCHER MODIFICATION HERE
           );
       pts->set_active(offset, true);
     }
@@ -423,7 +422,7 @@ int main(int argc, char * argv[])
         pts->mcsim->add_instruction(old_mapping[i], pts->get_curr_time(), 0, 0, 0, 0, 0, 0, 0,
                                     false, false, true, true, false, 
                                     0, 0, 0, 0, new_mapping[i], 0, 0, 0
-                                    , false, 0  //LDS PREFETCHER MODIFICATION HERE
+                                    , false, 0 , 0, 0 //LDS PREFETCHER MODIFICATION HERE
                                     );
       }
       for (uint32_t i = 0; i < htid_to_pid.size(); i++)
@@ -432,7 +431,7 @@ int main(int argc, char * argv[])
         pts->mcsim->add_instruction(new_mapping[i], pts->get_curr_time(), 0, 0, 0, 0, 0, 0, 0,
                                     false, false, true, true, true, 
                                     0, 0, 0, 0, old_mapping[i], 0, 0, 0
-                                    , false, 0  //LDS PREFETCHER MODIFICATION HERE
+                                    , false, 0, 0, 0  //LDS PREFETCHER MODIFICATION HERE
                                     );
       }
       //cout << " NEW mapping ";
@@ -469,9 +468,6 @@ int main(int argc, char * argv[])
         for (uint32_t i = 0; i < num_instrs; i++)
         {
           PTSInstr * ptsinstr = &(pts_m->val.instr[i]);
-          if (ptsinstr->hint_pointer_valid) {
-            num_valid_hint++;
-          }
           num_available_slot = pts->mcsim->add_instruction(
             old_mapping_inv[curr_p->tid_to_htid + ptsinstr->hthreadid_],
             ptsinstr->curr_time_,
@@ -497,7 +493,9 @@ int main(int argc, char * argv[])
 //            ptsinstr->rw3);
             ptsinstr->rw3,                      //LDS PREFETCHER MODIFICATION HERE
             ptsinstr->hint_pointer_valid,
-            ptsinstr->hint_pointer);
+            ptsinstr->hint_pointer,
+            ptsinstr->hint_header,
+            ptsinstr->hint_footer);
         }
         if (num_instrs_per_th > 0)
         {
@@ -578,7 +576,6 @@ int main(int argc, char * argv[])
   cout << (((PTSMessage *)programs[0].buffer)->val.str) << endl;
   strcpy(((PTSMessage *)programs[0].buffer)->val.str, "nono");
   cout << "^^" << sendto(programs[0].sockfd, programs[0].buffer, sizeof(PTSMessage), 0, (struct sockaddr *)&(programs[0].my_addr), addr_len) << endl;*/
-  cout << "Number of valid hints: " << num_valid_hint << endl;
   return 0;
 }
 

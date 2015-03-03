@@ -126,3 +126,144 @@ g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsi
 g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
 cp -f obj_dbg/mcsim mcsim
 make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/PTS.o PTS.cc
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/PTS.o PTS.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+g++ -DTARGET_IA32E -c -Wno-unknown-pragmas -Wall -ggdb -g -O0   -I/home/agy/mcsim/pin/extras/xed2-intel64/include -o obj_dbg/McSim.o McSim.cc
+g++ -DTARGET_IA32E -Wno-unknown-pragmas -Wall -ggdb -g -O0  -o obj_dbg/mcsim obj_dbg/PTSCache.o obj_dbg/PTSComponent.o obj_dbg/PTSCore.o obj_dbg/PTSO3Core.o obj_dbg/PTSDirectory.o obj_dbg/PTSRBoL.o obj_dbg/PTSMemoryController.o obj_dbg/PTSTLB.o obj_dbg/PTSXbar.o obj_dbg/McSim.o obj_dbg/PTS.o main.cc
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'
+make[1]: Entering directory `/home/agy/mcsim/McSim'
+cp -f obj_dbg/mcsim mcsim
+make[1]: Leaving directory `/home/agy/mcsim/McSim'

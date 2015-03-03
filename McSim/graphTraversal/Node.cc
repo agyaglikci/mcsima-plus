@@ -21,3 +21,7 @@ void Node::setHintPointer(Node *neighbor){
 Node * Node::getHitPointer(){
     return nodeHint->nodePointer;
 }
+
+hint Node::getHint(){
+	return *nodeHint;
+}
