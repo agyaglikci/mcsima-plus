@@ -20,7 +20,7 @@ public:
     hint * nodeHint;
     Node(int index);
     void setHintPointer(Node * neighbor);
-    Node * getHitPointer();
+    hint getHintPointer();
     //bool procFlags [NUM_OF_PROC] = { false };
 };
 

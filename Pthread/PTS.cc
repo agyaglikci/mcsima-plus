@@ -166,7 +166,6 @@ bool PthreadTimingSimulator::add_instruction(
   }
   /*LDS Prefetcher modification ends here*/
 
-
   if (num_piled_instr > 0 && (ptsmessage->val.instr[num_piled_instr-1]).hthreadid_ != hthreadid_)
   {
     cout << curr_time_ << "  " << (ptsmessage->val.instr[num_piled_instr-1]).hthreadid_ << "  " << hthreadid_ << endl;

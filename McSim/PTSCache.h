@@ -113,6 +113,9 @@ namespace PinPthread
       uint64_t         num_prefetch_requests;
       uint64_t         num_prefetch_hits;
 
+      bool             use_lds_prefetch;
+      uint64_t         num_hints; // added for LDS prefetcher
+
     private:
       pair< uint64_t, coherence_state_type > *** tags;  // address + coherence state of a set-associative cache
       //vector< list< pair< uint64_t, coherence_state_type > > > tags;  // address + coherence state of a set-associative cache

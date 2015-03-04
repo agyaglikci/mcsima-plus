@@ -42,8 +42,8 @@ void *gotoNext(void *arg)
 
     Node myNode = *p->myGraph->nodeArray[startIndex];
     for (int i = 0 ; i < GRAPH_SIZE ; i++) {
-        //myNode.procFlags[i] = true;
-        myNode = *myNode.getHitPointer();
+        hint myHint = myNode.getHintPointer();
+        myNode = *myHint.nodePointer;
     }
     return (NULL);
 }
