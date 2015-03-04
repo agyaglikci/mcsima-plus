@@ -152,18 +152,15 @@ bool PthreadTimingSimulator::add_instruction(
   ADDRINT * readAddr = (ADDRINT *) raddr;
   uint32_t hint_footer, hint_header;
   uint64_t hint_pointer;
-  
-  PIN_SafeCopy(&hint_header , readAddr , sizeof(uint32_t));
-  PIN_SafeCopy(&hint_footer , readAddr + sizeof(uint32_t) + sizeof(uint64_t), sizeof(uint32_t));
-  PIN_SafeCopy(&hint_pointer, readAddr + sizeof(uint32_t) , sizeof(uint64_t));
-
-  ptsinstr->hint_pointer = hint_pointer;
-  ptsinstr->hint_header = hint_header;
-  ptsinstr->hint_footer = hint_footer;
+  ptsinstr->hint_pointer = 326;
   ptsinstr->hint_pointer_valid = false;
   
-  if (hint_header == 0x0F0F0F0F){    
+  PIN_SafeCopy(&hint_header , readAddr , sizeof(uint32_t));
+  if (hint_header == 0x0F0F0F0F){
+    PIN_SafeCopy(&hint_footer , readAddr + sizeof(uint32_t) + sizeof(uint64_t), sizeof(uint32_t));
     if (hint_footer == 0xF0F0F0F0){
+      PIN_SafeCopy(&hint_pointer, readAddr + sizeof(uint32_t) , sizeof(uint64_t));
+      ptsinstr->hint_pointer = hint_pointer;
       ptsinstr->hint_pointer_valid = true;
     }
   }

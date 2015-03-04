@@ -188,7 +188,6 @@ McSim::McSim(PthreadTimingSimulator * pts_)
   use_rbol      = pts->get_param_str("pts.use_rbol") == "true" ? true : false;
   is_asymmetric = pts->get_param_str("is_asymmetric") == "true" ? true : false;
   num_hint = 0;
-  //num_headers = 0;
 
   string is_asymmetric_text = is_asymmetric ? "yes" : "no";
 
@@ -546,9 +545,6 @@ McSim::~McSim()
     delete (*iter);
   }
   cout << "number of hints: " << num_hint << endl;
-  //cout << "number of headers: " << num_headers << endl;
-  //cout << "number of footers: " << num_footer_detected << endl;
-  
 
   delete global_q;
 }
@@ -755,10 +751,9 @@ uint32_t McSim::add_instruction(
     bool     isbarrier,
     uint32_t rr0, uint32_t rr1, uint32_t rr2, uint32_t rr3,
     uint32_t rw0, uint32_t rw1, uint32_t rw2, uint32_t rw3
-  , bool hint_pointer_valid, uint64_t hint_pointer, uint32_t hint_header, uint32_t hint_footer //LDS PREFETCHER MODIFICATION HERE
+  , bool hint_pointer_valid, uint64_t hint_pointer //LDS PREFETCHER MODIFICATION HERE
     )
 {
-  
   // push a new event to the event queue
   uint32_t num_available_slot = 0;
   num_fetched_instrs++;
@@ -879,16 +874,9 @@ uint32_t McSim::add_instruction(
         rlen = rlen - (rlen % sizeof(uint64_t)) + sizeof(uint64_t);
       }
       
-      /* LDS Prefetcher Begins Here */
-      //cout << "hint_header: " << hint_header << endl;
-      //if (hint_header == 0x0F0F0F0F) num_header_detected++;
-      //if (hint_footer == 0xF0F0F0F0) num_footer_detected++;
-      if (hint_header == 0x0F0F0F0F && hint_footer == 0xF0F0F0F0){
+      if (hint_pointer_valid){
         num_hint++;
-        //TODO: Implement request
       }
-      
-      /* LDS Prefetcher Begins Here */
       
       while (rlen != 0)
       {

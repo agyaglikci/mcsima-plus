@@ -21,7 +21,6 @@ public:
     Node(int index);
     void setHintPointer(Node * neighbor);
     Node * getHitPointer();
-    hint getHint();
     //bool procFlags [NUM_OF_PROC] = { false };
 };
 
