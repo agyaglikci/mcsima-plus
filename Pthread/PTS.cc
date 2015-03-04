@@ -148,12 +148,24 @@ bool PthreadTimingSimulator::add_instruction(
   ptsinstr->rw2        = rw2;
   ptsinstr->rw3        = rw3;
 
-  /*LDS Prefetcher modification starts here*/
-  //PIN_SafeCopy(&(ptsinstr->hint_header) , raddr , sizeof(uint32_t));
-  //PIN_SafeCopy(&(ptsinstr->hint_pointer), raddr + sizeof(uint32_t) , sizeof(uint64_t));
-  //PIN_SafeCopy(&(ptsinstr->hint_footer) , raddr + sizeof(uint32_t) + sizeof(uint64_t), sizeof(uint32_t));
-  /*LDS Prefetcher modification ends here*/
+  /*LDS PREFETCHER MODIFICATION HERE */
+  ADDRINT * readAddr = (ADDRINT *) raddr;
+  uint32_t hint_footer, hint_header;
+  uint64_t hint_pointer;
+  ptsinstr->hint_pointer = 326;
+  ptsinstr->hint_pointer_valid = false;
   
+  PIN_SafeCopy(&hint_header , readAddr , sizeof(uint32_t));
+  if (hint_header == 0x0F0F0F0F){
+    PIN_SafeCopy(&hint_footer , readAddr + sizeof(uint32_t) + sizeof(uint64_t), sizeof(uint32_t));
+    if (hint_footer == 0xF0F0F0F0){
+      PIN_SafeCopy(&hint_pointer, readAddr + sizeof(uint32_t) , sizeof(uint64_t));
+      ptsinstr->hint_pointer = hint_pointer;
+      ptsinstr->hint_pointer_valid = true;
+    }
+  }
+  /*LDS Prefetcher modification ends here*/
+
   if (num_piled_instr > 0 && (ptsmessage->val.instr[num_piled_instr-1]).hthreadid_ != hthreadid_)
   {
     cout << curr_time_ << "  " << (ptsmessage->val.instr[num_piled_instr-1]).hthreadid_ << "  " << hthreadid_ << endl;

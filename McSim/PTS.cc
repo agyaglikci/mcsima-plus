@@ -129,12 +129,15 @@ bool PthreadTimingSimulator::add_instruction(
     bool     isbarrier,
     uint32_t rr0, uint32_t rr1, uint32_t rr2, uint32_t rr3,
     uint32_t rw0, uint32_t rw1, uint32_t rw2, uint32_t rw3
+  , bool hint_pointer_valid, uint64_t hint_pointer //LDS PREFETCHER MODIFICATION HERE
     )
 {
   return mcsim->add_instruction(hthreadid_, curr_time_,
     waddr, wlen, raddr, raddr2, rlen, ip, category,
     isbranch, isbranchtaken, islock, isunlock, isbarrier,
-    rr0, rr1, rr2, rr3, rw0, rw1, rw2, rw3);
+    rr0, rr1, rr2, rr3, rw0, rw1, rw2, rw3
+  , hint_pointer_valid, hint_pointer //LDS PREFETCHER MODIFICATION HERE
+    );
 }
 
 

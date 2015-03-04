@@ -187,10 +187,9 @@ McSim::McSim(PthreadTimingSimulator * pts_)
   use_o3core    = pts->get_param_str("pts.use_o3core") == "true" ? true : false;
   use_rbol      = pts->get_param_str("pts.use_rbol") == "true" ? true : false;
   is_asymmetric = pts->get_param_str("is_asymmetric") == "true" ? true : false;
+  num_hint = 0;
 
   string is_asymmetric_text = is_asymmetric ? "yes" : "no";
-  cout << "is_asymmetric  : " << is_asymmetric_text << endl;
-  cout << "number of cores: " << num_hthreads << "default value for number of cores : " << max_hthreads << endl; 
 
   uint32_t num_threads_per_l1_cache   = pts->get_param_uint64("pts.num_hthreads_per_l1$", 4);
   assert(use_o3core == false || num_threads_per_l1_cache == 1);
@@ -313,7 +312,7 @@ McSim::McSim(PthreadTimingSimulator * pts_)
     {
       if (noc_type == "mesh")
       {
-        cout << "ct_mesh" << ct_mesh << endl;
+//        cout << "ct_mesh" << ct_mesh << endl;
         noc = new Mesh2D(ct_mesh, 0, this);
       }
       else
@@ -545,7 +544,7 @@ McSim::~McSim()
     cout << "l1ds " << i << " is deleted" << endl; i++;
     delete (*iter);
   }
-
+  cout << "number of hints: " << num_hint << endl;
 
   delete global_q;
 }
@@ -752,6 +751,7 @@ uint32_t McSim::add_instruction(
     bool     isbarrier,
     uint32_t rr0, uint32_t rr1, uint32_t rr2, uint32_t rr3,
     uint32_t rw0, uint32_t rw1, uint32_t rw2, uint32_t rw3
+  , bool hint_pointer_valid, uint64_t hint_pointer //LDS PREFETCHER MODIFICATION HERE
     )
 {
   // push a new event to the event queue
@@ -873,7 +873,11 @@ uint32_t McSim::add_instruction(
       {
         rlen = rlen - (rlen % sizeof(uint64_t)) + sizeof(uint64_t);
       }
-
+      
+      if (hint_pointer_valid){
+        num_hint++;
+      }
+      
       while (rlen != 0)
       {
         if (!is_race_free_application && !hthread->is_private(raddr)) num_available_slot = 0;
